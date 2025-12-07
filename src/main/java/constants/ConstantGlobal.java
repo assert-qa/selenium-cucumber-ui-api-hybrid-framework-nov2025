@@ -26,4 +26,6 @@ public class ConstantGlobal {
     public final static String EXTENT_REPORT_PATH = PropertiesHelper.getValue("EXTENT_REPORT_PATH");
     public final static String AUTHOR = PropertiesHelper.getValue("AUTHOR");
     public final static String LOCATE = PropertiesHelper.getValue("LOCATE");
+
+    public
 }
