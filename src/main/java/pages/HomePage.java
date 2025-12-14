@@ -125,6 +125,55 @@ public class HomePage extends DriverFactory {
         LogUtils.info("Element: " + xpath + " was clicked!");
     }
 
+    public String verifyCategoryPageAccordingSelectedCategoryAndProduct(){
+        verifyElementVisible(By.cssSelector(clickedCategoryPageLabel));
+        return getElementText(By.cssSelector(clickedCategoryPageLabel));
+    }
 
+    // ADD TO CART FROM RECOMMENDATIONS TEST STEP
+    public String verifyRecommendationItemsIsVisible(){
+        verifyElementVisible(By.xpath(recommendedItemsIsVisible));
+        return getElementText(By.xpath(recommendedItemsIsVisible));
+    }
 
+    public void clickAddRecommendedItemToCart(){
+        clickElement(By.xpath(addToCartButton));
+    }
+
+    public void clickViewCartButton(){
+        clickElement(By.xpath(viewCart));
+    }
+
+    // SCROLL UP USING 'ARROW' BUTTON AND SCROLL DOWN FUNCTIONALITY
+    public void clickScrollUpButton(){
+        clickElement(By.xpath(clickScrollUpButton));
+    }
+
+    public String verifyLabelWhenScrollUp(){
+        verifyElementVisible(By.xpath(scrollUpLabel));
+        return getElementText(By.xpath(scrollUpLabel));
+    }
+
+    public void scrollToTopOfAPage(){
+        scrollToElement(By.id(landingPageImage));
+    }
+
+    // ROUGH (METHOD HELPER)
+    public static String capitalizeFirstLetter(String str){
+        if (str == null || str.isEmpty()){
+            return str;
+        }
+
+        String [] words = str.split(" ");
+        StringBuilder capitalizedWords = new StringBuilder();
+
+        for (String word : words){
+            if (!word.isEmpty()){
+                capitalizedWords.append(word.substring(0, 1).toUpperCase())
+                        .append(word.substring(1).toUpperCase())
+                        .append(" "); // Add space back
+            }
+        }
+        return capitalizedWords.toString().trim(); // Trim trailing space
+    }
 }
