@@ -99,4 +99,40 @@ public class LoginPage extends DriverFactory {
         selectDropDown(By.xpath(years), year);
     }
 
+    public void selectCheckBox(){
+        clickElement(By.cssSelector(checkBoxSignUp));
+        clickElement(By.cssSelector(checkBoxReceiveSpecialOffers));
+    }
+
+    public void fillAddressInformation(String firstName, String lastName, String company,
+                                       String address, String address2, String country,
+                                       String state, String city, String zipCode, String mobileNumber){
+
+        setText(By.xpath(userFirstName), firstName);
+        setText(By.cssSelector(userLastName), lastName);
+        setText(By.cssSelector(userCompany), company);
+        setText(By.cssSelector(userAddress1), address);
+        setText(By.cssSelector(userAddress2), address2);
+        selectDropDown(By.xpath(userCountry), country);
+        setText(By.xpath(userState), state);
+        setText(By.xpath(userCity), city);
+        setText(By.xpath(userZipCode), zipCode);
+        setText(By.cssSelector(userMobileNumber), mobileNumber);
+    }
+
+    public void createAccountButton(){
+        clickElement(By.xpath(createAccountButton));
+    }
+
+    public String verifyAccountWasCreatedIsVisible(){
+        if (isElementDisplayed(By.xpath(accountCreatedLabel))){
+            return getElementText(By.xpath(accountCreatedLabel));
+        }else {
+            return "Account Created! is not visible";
+        }
+    }
+
+    public void clickContinueButton(){
+        clickElement(By.xpath(continueButton));
+    }
 }
