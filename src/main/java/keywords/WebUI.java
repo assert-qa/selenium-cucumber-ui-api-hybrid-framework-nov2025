@@ -101,6 +101,42 @@ public class WebUI {
         Assert.assertEquals(actual, expected, message);
     }
 
+    @Step("Verify True: {0}")
+    public static void verifyTrue(boolean condition){
+        waitForPageLoaded();
+        sleep(STEP_TIME);
+        LogUtils.info("Verify true: " + condition);
+        // ExtentTestManager.logMessage(Status.PASS, "Verify true: " + condition);
+        Assert.assertTrue(condition, "Fail, Expected condition to be TRUE, but was FALSE");
+    }
+
+    @Step("Verify True: {0}")
+    public static void verifyTrue(boolean condition, String message){
+        waitForPageLoaded();
+        sleep(STEP_TIME);
+        LogUtils.info("Verify true: " + condition);
+        // ExtentTestManager.logMessage(Status.PASS, "Verify true: " + condition);
+        Assert.assertTrue(condition, message);
+    }
+
+    @Step("Verify False: {0}")
+    public static void verifyFalse(boolean condition){
+        waitForPageLoaded();
+        sleep(STEP_TIME);
+        LogUtils.info("Verify false: " + condition);
+        // ExtentTestManager.logMessage(Status.PASS, "Verify false: " + condition);
+        Assert.assertFalse(condition, "Fail, Expected condition to be FALSE, but was TRUE");
+    }
+
+    @Step("Verify False: {0}")
+    public static void verifyFalse(boolean condition, String message){
+        waitForPageLoaded();
+        sleep(STEP_TIME);
+        LogUtils.info("Verify false: " + condition);
+        // ExtentTestManager.logMessage(Status.PASS, "Verify false: " + condition);
+        Assert.assertFalse(condition, message);
+    }
+
     @Step("Check element existing {0}")
     public static Boolean checkElementExist(By by) {
         waitForPageLoaded();

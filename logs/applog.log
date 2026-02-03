@@ -1,0 +1,61 @@
+[INFO] 03-02-2026 11:24:06 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:24:06 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 03-02-2026 11:24:06 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:24:06 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 03-02-2026 11:24:06 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:24:06 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 03-02-2026 11:24:06 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:34:34 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:34:34 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 03-02-2026 11:34:34 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:34:34 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 03-02-2026 11:34:34 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:34:34 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 03-02-2026 11:34:34 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:37:10 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:37:10 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 03-02-2026 11:37:10 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:37:10 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 03-02-2026 11:37:10 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:37:10 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 03-02-2026 11:37:10 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:37:41 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:37:41 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 03-02-2026 11:37:41 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:37:41 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 03-02-2026 11:37:41 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:37:41 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 03-02-2026 11:37:41 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:38:33 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:38:33 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 03-02-2026 11:38:33 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:38:33 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 03-02-2026 11:38:33 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:38:33 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 03-02-2026 11:38:33 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:41:55 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:41:55 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 03-02-2026 11:41:55 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:41:55 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 03-02-2026 11:41:55 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:41:55 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 03-02-2026 11:41:55 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:42:53 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:42:53 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 03-02-2026 11:42:53 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:42:53 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 03-02-2026 11:42:53 [main] [LogUtils] - SCENARIO START: User login with incorrect email and password
+[INFO] 03-02-2026 11:42:53 [main] [LogUtils] - SCENARIO STATUS: Starting
+[INFO] 03-02-2026 11:42:53 [main] [LogUtils] - ExtentTest initialized for: User login with incorrect email and password
+[INFO] 03-02-2026 11:42:53 [main] [LogUtils] - SCENARIO FINISHED: User login with incorrect email and password
+[INFO] 03-02-2026 11:42:53 [main] [LogUtils] - SCENARIO STATUS: UNDEFINED
+[INFO] 03-02-2026 11:42:54 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:42:54 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 03-02-2026 11:42:54 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:44:04 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:44:04 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 03-02-2026 11:44:04 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:44:04 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 03-02-2026 11:44:04 [main] [LogUtils] - ========================================
+[INFO] 03-02-2026 11:44:04 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 03-02-2026 11:44:04 [main] [LogUtils] - ========================================
