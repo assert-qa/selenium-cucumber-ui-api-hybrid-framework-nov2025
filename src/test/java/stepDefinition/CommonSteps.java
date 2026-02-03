@@ -101,6 +101,10 @@ public class CommonSteps {
                 loginPage.clickDeleteAccountButton();
                 ExtentTestManager.logMessage("Clicked 'Delete Account' button");
                 break;
+            case "logout":
+                loginPage.clickLogoutButton();
+                ExtentTestManager.logMessage("Clicked 'Logout' button");
+                break;
             default:
                 throw new IllegalArgumentException("Button not supported: " + buttonName);
         }
@@ -139,6 +143,22 @@ public class CommonSteps {
             ExtentTestManager.logMessage("Verified: " + actualResult);
         } else {
             throw new IllegalArgumentException("Text verification not supported: " + expectedText);
+        }
+    }
+
+    @Then("I verify error message {string} is visible")
+    public void iVerifyErrorMessageIsVisible(String errorMessage) {
+        String actualError;
+        if (errorMessage.equals("Email Address already exist!")) {
+            actualError = loginPage.verifySignUpInLineErrorMessage();
+            WebUI.verifyEquals(actualError, errorMessage);
+            ExtentTestManager.logMessage("Verified error message: " + errorMessage);
+        } else if (errorMessage.equals("Your email or password is incorrect!")) {
+            actualError = loginPage.verifyInlineErrorMessage();
+            WebUI.verifyEquals(actualError, errorMessage);
+            ExtentTestManager.logMessage("Verified error message: " + errorMessage);
+        } else {
+            throw new IllegalArgumentException("Error message verification not supported: " + errorMessage);
         }
     }
 }

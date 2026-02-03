@@ -54,6 +54,7 @@ public class LoginPage extends DriverFactory {
     String createdUserPassword = setUp.getProperty("CREATED_USER_PASSWORD");
     String loginButton = setUp.getProperty("LOGIN_BUTTON");
     String inLineErrorMessage = setUp.getProperty("IN_LINE_ERROR_MESSAGE");
+    String signUpInLineErrorMessage = setUp.getProperty("SIGN_UP_IN_LINE_ERROR_MESSAGE");
     String logOutButton = setUp.getProperty("LOG_OUT_BUTTON");
     String deleteAccountButton = setUp.getProperty("DELETE_ACCOUNT_BUTTON");
     String accountDeletedLabel = setUp.getProperty("ACCOUNT_DELETED_LABEL");
@@ -221,6 +222,14 @@ public class LoginPage extends DriverFactory {
         }
     }
 
+    public String verifySignUpInLineErrorMessage(){
+        if (isElementDisplayed(By.xpath(signUpInLineErrorMessage))){
+            return getElementText(By.xpath(signUpInLineErrorMessage));
+        } else {
+            return "Email Address already exist! is not visible";
+        }
+    }
+
     public String verifyLoginLabel(){
         if(isElementDisplayed(By.xpath(loginLabel))){
             return getElementText(By.xpath(loginLabel));
@@ -232,6 +241,7 @@ public class LoginPage extends DriverFactory {
     public void clickLogoutButton(){
         clickElement(By.xpath(logOutButton));
     }
+
 
     public void deleteAccountButton(){
         clickElement(By.xpath(deleteAccountButton));
