@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import static helpers.PropertiesHelper.loadAllFiles;
 import static keywords.WebUI.*;
+import pages.models.ContactFormData;
 
 public class ContactUsPage extends DriverFactory {
     Properties setUp = loadAllFiles();
@@ -44,27 +45,22 @@ public class ContactUsPage extends DriverFactory {
         }
     }
 
-    public void setCustomerName(String name){
-        setText(By.xpath(customerName), name);
-    }
-
-    public void setCustomerEmail(String email){
-        setText(By.xpath(customerEmail), email);
-    }
-
-    public void setContactSubject(String subject){
-        setText(By.xpath(customerSubject), subject);
-    }
-
-    public void setCustomerMessage(String message){
-        setText(By.cssSelector(customerMessage), message);
+    public void fillContactForm(ContactFormData data){
+        if (data.getName() != null)
+            setText(By.xpath(customerName), data.getName());
+        if (data.getEmail() != null)
+            setText(By.xpath(customerEmail), data.getEmail());
+        if (data.getSubject() != null)
+            setText(By.xpath(customerSubject), data.getSubject());
+        if (data.getMessage() != null)
+            setText(By.cssSelector(customerMessage), data.getMessage());
     }
 
     public void uploadFile(String filePath){
         setText(By.xpath(browseFileButton), filePath);
     }
 
-    public void submitContactButton(){
+    public void clickSubmitContactButton(){
         clickElement(By.xpath(submitButton));
     }
 
@@ -77,7 +73,7 @@ public class ContactUsPage extends DriverFactory {
         }
     }
 
-    public void homeButton(){
+    public void clickHomeButton(){
         clickElement(By.xpath(homeButton));
     }
 

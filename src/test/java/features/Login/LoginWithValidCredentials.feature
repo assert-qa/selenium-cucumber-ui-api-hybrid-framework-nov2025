@@ -1,4 +1,3 @@
-
 Feature: Login With Valid Credentials
 
   Scenario: User login with valid email and password

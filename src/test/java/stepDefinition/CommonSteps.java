@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import keywords.WebUI;
+import pages.ContactUsPage;
 import pages.LoginPage;
 import reports.ExtentTestManager;
 import utils.LogUtils;
@@ -15,6 +16,7 @@ import utils.LogUtils;
 public class CommonSteps {
     private TestContext testContext;
     private LoginPage loginPage;
+    private ContactUsPage contactUsPage;
     private static String GENERATED_NAME = null;
 
     public CommonSteps(TestContext testContext) {
@@ -60,20 +62,9 @@ public class CommonSteps {
         if (buttonName.equalsIgnoreCase("Signup / Login")) {
             loginPage.goToLoginPage();
             ExtentTestManager.logMessage("Clicked on '" + buttonName + "' button");
-        }
-    }
-
-    @Then("I verify {string} is visible")
-    public void iVerifyIsVisible(String expectedText) {
-        String actualResult;
-        if (expectedText.equals("Login to your account")) {
-            actualResult = loginPage.verifyLoginLabel();
-            WebUI.verifyEquals(actualResult, expectedText);
-            ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
-        } else if (expectedText.equals("New User Signup!")) {
-            actualResult = loginPage.verifyNewUserSignupIsVisible();
-            WebUI.verifyEquals(actualResult, expectedText);
-            ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
+        } else if (buttonName.equalsIgnoreCase("Contact Us")) {
+            contactUsPage.goToContactUsPage();
+            ExtentTestManager.logMessage("Clicked on 'Contact Us' button");
         }
     }
 
@@ -105,8 +96,34 @@ public class CommonSteps {
                 loginPage.clickLogoutButton();
                 ExtentTestManager.logMessage("Clicked 'Logout' button");
                 break;
+            case "submit":
+                contactUsPage.clickSubmitContactButton();
+                ExtentTestManager.logMessage("Clicked 'Submit' button");
+                break;
+            case "home":
+                contactUsPage.clickHomeButton();
+                ExtentTestManager.logMessage("Clicked 'Home' button");
+                break;
             default:
                 throw new IllegalArgumentException("Button not supported: " + buttonName);
+        }
+    }
+
+    @Then("I verify {string} is visible")
+    public void iVerifyIsVisible(String expectedText) {
+        String actualResult;
+        if (expectedText.equals("Login to your account")) {
+            actualResult = loginPage.verifyLoginLabel();
+            WebUI.verifyEquals(actualResult, expectedText);
+            ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
+        } else if (expectedText.equals("New User Signup!")) {
+            actualResult = loginPage.verifyNewUserSignupIsVisible();
+            WebUI.verifyEquals(actualResult, expectedText);
+            ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
+        } else if (expectedText.equals("GET IN TOUCH")) {
+            actualResult = contactUsPage.verifyGetInTouchIsVisible();
+            WebUI.verifyEquals(actualResult, expectedText);
+            ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
         }
     }
 
