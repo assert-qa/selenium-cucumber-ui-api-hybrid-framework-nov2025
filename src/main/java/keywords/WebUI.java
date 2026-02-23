@@ -23,6 +23,7 @@ import utils.LogUtils;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.List;
 
@@ -230,6 +231,20 @@ public class WebUI {
         LogUtils.info("Get text: " + text);
       //  ExtentTestManager.logMessage(Status.PASS, "Get text: " + text);
         return text;
+    }
+
+    // Alert handle
+    @Step("Accept alert")
+    public static void acceptAlert() {
+        try {
+            WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(EXPLICIT_TIMEOUT), Duration.ofMillis(500));
+            wait.until(ExpectedConditions.alertIsPresent());
+            DriverManager.getDriver().switchTo().alert().accept();
+            LogUtils.info("Alert accepted");
+        } catch (Throwable error) {
+            LogUtils.error("No alert present to accept.");
+            Assert.fail("No alert present to accept.");
+        }
     }
 
     //Wait for Element

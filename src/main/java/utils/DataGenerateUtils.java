@@ -7,7 +7,7 @@ import java.util.List;
 
 import static helpers.DataFakerHelper.*;
 
-public class DataGenerateUtil {
+public class DataGenerateUtils {
     private static final List<String> TITLES = Arrays.asList("Mr.", "Mrs.");
     private static final List<String> COUNTRIES = Arrays.asList("India","United States","Canada","Australia","Israel","New Zealand","Singapore");
     private static final List<String> SUBJECTS = Arrays.asList("Product Inquiry", "Technical Support",

@@ -9,6 +9,7 @@ import java.util.Properties;
 import static helpers.PropertiesHelper.loadAllFiles;
 import static keywords.WebUI.*;
 import pages.models.ContactFormData;
+import utils.UploadUtils;
 
 public class ContactUsPage extends DriverFactory {
     Properties setUp = loadAllFiles();
@@ -57,11 +58,15 @@ public class ContactUsPage extends DriverFactory {
     }
 
     public void uploadFile(String filePath){
-        setText(By.xpath(browseFileButton), filePath);
+        UploadUtils.uploadFile(By.xpath(browseFileButton), filePath);
     }
 
     public void clickSubmitContactButton(){
         clickElement(By.xpath(submitButton));
+    }
+
+    public void clickOkButton(){
+        acceptAlert();
     }
 
     public String verifySuccessfulMessage(){

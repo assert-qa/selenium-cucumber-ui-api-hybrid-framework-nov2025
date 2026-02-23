@@ -7,6 +7,7 @@ import keywords.WebUI;
 import pages.ContactUsPage;
 import pages.models.ContactFormData;
 import reports.ExtentTestManager;
+import utils.FileUtils;
 import utils.LogUtils;
 
 public class StepsContactUsForm {
@@ -30,23 +31,29 @@ public class StepsContactUsForm {
                 .name(name)
                 .email(email)
                 .subject(subject)
+                .message(message)
                 .build();
-        LogUtils.info("Entered contact details: " + name + ", " + email);
+        contactUsPage.fillContactForm(contactFormData);
+        LogUtils.info("Entered contact details: " + name + ", " + email + ", " + subject + ", " + message);
         ExtentTestManager.logMessage("Entered contact details successfully");
     }
 
     @When("I upload file {string}")
-    public void iUploadFile(String fileName) {
-        contactUsPage.uploadFile(fileName);
-        LogUtils.info("Uploaded file: " + fileName);
-        ExtentTestManager.logMessage("File uploaded: " + fileName);
-    }
+    public void iUploadFile(String filePath) {
+        String fullPath = FileUtils.getFilePath(filePath);
 
-    @When("I click OK on alert")
-    public void iClickOKOnAlert() {
-        contactUsPage.acceptAlert();
-        LogUtils.info("Clicked OK on alert");
-        ExtentTestManager.logMessage("Alert accepted");
+        // Validate file exists before attempting upload
+        if (!FileUtils.fileExists(fullPath)) {
+            LogUtils.error("File not found: " + fullPath);
+            ExtentTestManager.logMessage("ERROR: File not found at: " + fullPath);
+            throw new RuntimeException("File not found: " + fullPath +
+                "\nExpected location: data/" + filePath +
+                "\nPlease create the file in the data folder.");
+        }
+
+        contactUsPage.uploadFile(fullPath);
+        LogUtils.info("Uploaded file: " + fullPath);
+        ExtentTestManager.logMessage("File uploaded: " + fullPath);
     }
 
     @Then("I verify success message {string} is visible")

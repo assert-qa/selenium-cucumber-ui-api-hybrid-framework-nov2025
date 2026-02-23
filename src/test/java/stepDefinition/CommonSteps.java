@@ -21,7 +21,9 @@ public class CommonSteps {
 
     public CommonSteps(TestContext testContext) {
         this.testContext = testContext;
+        // Always initialize page objects from the test context to ensure they are shared across steps
         this.loginPage = testContext.getLoginPage();
+        this.contactUsPage = testContext.getContactUsPage();
     }
 
     public CommonSteps() {
@@ -62,7 +64,7 @@ public class CommonSteps {
         if (buttonName.equalsIgnoreCase("Signup / Login")) {
             loginPage.goToLoginPage();
             ExtentTestManager.logMessage("Clicked on '" + buttonName + "' button");
-        } else if (buttonName.equalsIgnoreCase("Contact Us")) {
+        } else if (buttonName.equalsIgnoreCase("Contact us")) {
             contactUsPage.goToContactUsPage();
             ExtentTestManager.logMessage("Clicked on 'Contact Us' button");
         }
@@ -107,6 +109,13 @@ public class CommonSteps {
             default:
                 throw new IllegalArgumentException("Button not supported: " + buttonName);
         }
+    }
+
+    @When("I click OK on alert")
+    public void iClickOKOnAlert() {
+        contactUsPage.clickOkButton();
+        LogUtils.info("Clicked OK on alert");
+        ExtentTestManager.logMessage("Alert accepted");
     }
 
     @Then("I verify {string} is visible")

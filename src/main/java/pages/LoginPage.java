@@ -4,6 +4,9 @@ import factory.DriverFactory;
 import helpers.PropertiesHelper;
 import keywords.WebUI;
 import org.openqa.selenium.By;
+import pages.models.ContactFormData;
+import pages.models.CredentialsData;
+import pages.models.RegisterFormData;
 import utils.LogUtils;
 
 import java.util.Properties;
@@ -98,20 +101,21 @@ public class LoginPage extends DriverFactory {
         }
     }
 
-    private void selectGender(String gender){
-        if (gender.equalsIgnoreCase("Mr.")){
-            selectRadioButton(By.id(mrGender));
-        } else if (gender.equalsIgnoreCase("Mrs.")){
-            selectRadioButton(By.id(mrsGender));
-        }
+    private void selectGender(RegisterFormData data){
+        if (data.getTitle().equalsIgnoreCase("Mr.") || data.getTitle().equalsIgnoreCase("Mrs."))
+            selectRadioButton(By.id(data.getTitle().equalsIgnoreCase("Mr.") ? mrGender : mrsGender));
     }
 
-    public void fillAccountInformation(String title, String userPassword, String date, String month, String year){
-        selectGender(title);
-        setText(By.xpath(password), userPassword);
-        selectDropDown(By.xpath(days), date);
-        selectDropDown(By.xpath(months), month);
-        selectDropDown(By.xpath(years), year);
+    public void fillAccountInformation(RegisterFormData data){
+        selectGender(data);
+        if (data.getPassword() != null)
+            setText(By.xpath(password), data.getPassword());
+        if (data.getDay() != null)
+            selectDropDown(By.xpath(days), data.getDay());
+        if (data.getMonth() != null)
+            selectDropDown(By.xpath(months), data.getMonth());
+        if (data.getYear() != null)
+            selectDropDown(By.xpath(years), data.getYear());
     }
 
     public void selectCheckBox(String label) {
@@ -124,20 +128,27 @@ public class LoginPage extends DriverFactory {
         }
     }
 
-    public void fillAddressInformation(String firstName, String lastName, String company,
-                                       String address, String address2, String country,
-                                       String state, String city, String zipCode, String mobileNumber){
-
-        setText(By.xpath(userFirstName), firstName);
-        setText(By.cssSelector(userLastName), lastName);
-        setText(By.cssSelector(userCompany), company);
-        setText(By.cssSelector(userAddress1), address);
-        setText(By.cssSelector(userAddress2), address2);
-        selectDropDown(By.xpath(userCountry), country);
-        setText(By.xpath(userState), state);
-        setText(By.xpath(userCity), city);
-        setText(By.xpath(userZipCode), zipCode);
-        setText(By.cssSelector(userMobileNumber), mobileNumber);
+    public void fillAddressInformation(RegisterFormData data){
+        if (data.getFirstName() != null)
+            setText(By.xpath(userFirstName), data.getFirstName());
+        if (data.getLastName() != null)
+            setText(By.cssSelector(userLastName), data.getLastName());
+        if (data.getCompany() != null)
+            setText(By.cssSelector(userCompany), data.getCompany());
+        if (data.getAddress() != null)
+            setText(By.cssSelector(userAddress1), data.getAddress());
+        if (data.getAddress2() != null)
+            setText(By.cssSelector(userAddress2), data.getAddress2());
+        if (data.getCountry() != null)
+            selectDropDown(By.xpath(userCountry), data.getCountry());
+        if (data.getState() != null)
+            setText(By.xpath(userState), data.getState());
+        if (data.getCity() != null)
+            setText(By.xpath(userCity), data.getCity());
+        if (data.getZipCode() != null)
+            setText(By.xpath(userZipCode), data.getZipCode());
+        if (data.getMobileNumber() != null)
+            setText(By.cssSelector(userMobileNumber), data.getMobileNumber());
     }
 
     public void createAccountButton(){
@@ -178,9 +189,11 @@ public class LoginPage extends DriverFactory {
         clickElement(By.xpath(deleteButton));
     }
 
-    public void loginAccount(String userEmailAddress, String password){
-        setText(By.xpath(createdUserEmail), userEmailAddress);
-        setText(By.xpath(createdUserPassword), password);
+    public void loginAccount(CredentialsData data){
+        if (data.getUserEmail() != null)
+            setText(By.xpath(createdUserEmail), data.getUserEmail());
+        if (data.getUserPassword() != null)
+            setText(By.xpath(createdUserPassword), data.getUserPassword());
     }
 
     public String verifyNewUserSignupIsVisible() {
