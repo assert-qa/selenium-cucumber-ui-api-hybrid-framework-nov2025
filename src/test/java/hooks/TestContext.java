@@ -16,12 +16,14 @@ public class TestContext {
     private LoginPage loginPage;
     private PaymentPage paymentPage;
     private ProductPage productPage;
+    private TestCasePage testCasePage;
 
     public TestContext(){
         if (instance == null) {
             instance = this;
             ThreadGuard.protect(new DriverFactory().createDriver());
             LogUtils.info("Driver initialized in TestContext - " + getDriver());
+            this.testCasePage = new TestCasePage();
         }
     }
 
@@ -55,6 +57,10 @@ public class TestContext {
 
     public ProductPage getProductPage(){
         return (productPage == null) ? productPage = new ProductPage() : productPage;
+    }
+
+    public TestCasePage getTestCasePage() {
+        return (testCasePage == null) ? testCasePage = new TestCasePage() : testCasePage;
     }
 
     public static void reset() {

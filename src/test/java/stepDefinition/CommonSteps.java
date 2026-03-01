@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 import keywords.WebUI;
 import pages.ContactUsPage;
 import pages.LoginPage;
+import pages.TestCasePage;
 import reports.ExtentTestManager;
 import utils.LogUtils;
 
@@ -17,6 +18,7 @@ public class CommonSteps {
     private TestContext testContext;
     private LoginPage loginPage;
     private ContactUsPage contactUsPage;
+    private TestCasePage testCasePage;
     private static String GENERATED_NAME = null;
 
     public CommonSteps(TestContext testContext) {
@@ -24,6 +26,7 @@ public class CommonSteps {
         // Always initialize page objects from the test context to ensure they are shared across steps
         this.loginPage = testContext.getLoginPage();
         this.contactUsPage = testContext.getContactUsPage();
+        this.testCasePage = testContext.getTestCasePage();
     }
 
     public CommonSteps() {
@@ -67,6 +70,9 @@ public class CommonSteps {
         } else if (buttonName.equalsIgnoreCase("Contact us")) {
             contactUsPage.goToContactUsPage();
             ExtentTestManager.logMessage("Clicked on 'Contact Us' button");
+        } else if (buttonName.equalsIgnoreCase("Test Cases")) {
+            testCasePage.goToTestCasePage();
+            ExtentTestManager.logMessage("Clicked on 'Test Cases' button");
         }
     }
 
@@ -121,18 +127,22 @@ public class CommonSteps {
     @Then("I verify {string} is visible")
     public void iVerifyIsVisible(String expectedText) {
         String actualResult;
-        if (expectedText.equals("Login to your account")) {
-            actualResult = loginPage.verifyLoginLabel();
-            WebUI.verifyEquals(actualResult, expectedText);
-            ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
-        } else if (expectedText.equals("New User Signup!")) {
-            actualResult = loginPage.verifyNewUserSignupIsVisible();
-            WebUI.verifyEquals(actualResult, expectedText);
-            ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
-        } else if (expectedText.equals("GET IN TOUCH")) {
-            actualResult = contactUsPage.verifyGetInTouchIsVisible();
-            WebUI.verifyEquals(actualResult, expectedText);
-            ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
+        switch (expectedText) {
+            case "Login to your account" -> {
+                actualResult = loginPage.verifyLoginLabel();
+                WebUI.verifyEquals(actualResult, expectedText);
+                ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
+            }
+            case "New User Signup!" -> {
+                actualResult = loginPage.verifyNewUserSignupIsVisible();
+                WebUI.verifyEquals(actualResult, expectedText);
+                ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
+            }
+            case "GET IN TOUCH" -> {
+                actualResult = contactUsPage.verifyGetInTouchIsVisible();
+                WebUI.verifyEquals(actualResult, expectedText);
+                ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
+            }
         }
     }
 

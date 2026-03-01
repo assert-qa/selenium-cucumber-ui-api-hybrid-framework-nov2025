@@ -14,8 +14,7 @@ import org.testng.annotations.Test;
                 "hooks.CucumberReportListener",
                 "pretty",
                 "html:target/cucumber-reports/RegisterUser.html",
-                "json:target/cucumber-reports/RegisterUser.json",
-                "junit:target/cucumber-reports/RegisterUser.xml"
+                "json:target/cucumber-reports/RegisterUser.json"
         },
         monochrome = true
 )

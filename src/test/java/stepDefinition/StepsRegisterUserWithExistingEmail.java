@@ -13,7 +13,7 @@ public class StepsRegisterUserWithExistingEmail {
     // Constructor for Cucumber Dependency Injection
     public StepsRegisterUserWithExistingEmail(TestContext testContext){
         this.testContext = testContext;
-        this.loginPage = testContext.getLoginPage();
+        this.loginPage = new LoginPage();
     }
 
     // Zero-argument constructor as fallback

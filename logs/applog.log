@@ -1,162 +1,22 @@
-[INFO] 23-02-2026 13:36:55 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:36:55 [main] [LogUtils] - STARTING TEST SUITE
-[INFO] 23-02-2026 13:36:55 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:36:55 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:36:55 [main] [LogUtils] - SCENARIO START: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:36:55 [main] [LogUtils] - SCENARIO STATUS: Starting
-[INFO] 23-02-2026 13:36:55 [main] [LogUtils] - ExtentTest initialized for: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:36:55 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:36:55 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:36:57 [main] [LogUtils] - Driver initialized in TestContext - ChromeDriver: chrome on windows (b46af5d97dab7f6266e983fa730496e6)
-[INFO] 23-02-2026 13:36:57 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:36:57 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:36:57 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:37:00 [main] [LogUtils] - Open URL: http://automationexercise.com
-[INFO] 23-02-2026 13:37:00 [main] [LogUtils] - Verify By.xpath: //img[@alt='Website for automation practice'] is displayed
-[INFO] 23-02-2026 13:37:00 [main] [LogUtils] - Home page is visible successfully
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Click element By.xpath: //a[normalize-space()='Contact us']
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Verify By.xpath: //h2[contains(text(),'Get In Touch')] is displayed
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Get text: GET IN TOUCH
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Verify equals: GET IN TOUCH and GET IN TOUCH
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Set text: John Doe on element By.xpath: //div[@class='form-group col-md-6']//input[@type='text']
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Set text: johndoe@example.com on element By.xpath: //div[@class='form-group col-md-6']//input[@type='email']
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Set text: Test Subject on element By.xpath: //div[@class='form-group col-md-12']//input[@type='text']
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Set text: This is a test message on element By.cssSelector: #message
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Entered contact details: John Doe, johndoe@example.com, Test Subject, This is a test message
-[ERROR] 23-02-2026 13:37:02 [main] [LogUtils] - File not found: D:\CodeProject\Java\MyProject\CucumberBDDProject\CucumberMiniFramework\cucumber_hybrid_framework\test_file.txt
-[INFO] 23-02-2026 13:37:02 [main] [LogUtils] - Step failed - capturing screenshot
-[INFO] 23-02-2026 13:37:03 [main] [LogUtils] - SCENARIO FINISHED: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:37:03 [main] [LogUtils] - SCENARIO STATUS: FAILED
-[INFO] 23-02-2026 13:37:03 [main] [LogUtils] - ========================================
+[INFO] 01-03-2026 15:07:19 [main] [LogUtils] - ========================================
+[INFO] 01-03-2026 15:07:19 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 01-03-2026 15:07:19 [main] [LogUtils] - ========================================
+[INFO] 01-03-2026 15:07:19 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 01-03-2026 15:07:19 [main] [LogUtils] - SCENARIO START: Verify user is navigated to test cases page successfully
+[INFO] 01-03-2026 15:07:19 [main] [LogUtils] - SCENARIO STATUS: Starting
+[INFO] 01-03-2026 15:07:20 [main] [LogUtils] - ExtentTest initialized for: Verify user is navigated to test cases page successfully
+[INFO] 01-03-2026 15:07:20 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 01-03-2026 15:07:20 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 01-03-2026 15:07:21 [main] [LogUtils] - Driver initialized in TestContext - ChromeDriver: chrome on windows (d123ead864e5ad1f1e3421dc0c3f0ff3)
+[INFO] 01-03-2026 15:07:21 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 01-03-2026 15:07:21 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 01-03-2026 15:07:21 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 01-03-2026 15:07:22 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
+[INFO] 01-03-2026 15:10:22 [main] [LogUtils] - Step failed - capturing screenshot
+[INFO] 01-03-2026 15:11:06 [main] [LogUtils] - SCENARIO FINISHED: Verify user is navigated to test cases page successfully
+[INFO] 01-03-2026 15:11:06 [main] [LogUtils] - SCENARIO STATUS: FAILED
+[INFO] 01-03-2026 15:11:07 [main] [LogUtils] - ========================================
 
-[INFO] 23-02-2026 13:37:03 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:37:03 [main] [LogUtils] - TEST SUITE COMPLETED
-[INFO] 23-02-2026 13:37:03 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:39:06 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:39:06 [main] [LogUtils] - STARTING TEST SUITE
-[INFO] 23-02-2026 13:39:06 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:39:06 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:39:06 [main] [LogUtils] - SCENARIO START: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:39:06 [main] [LogUtils] - SCENARIO STATUS: Starting
-[INFO] 23-02-2026 13:39:07 [main] [LogUtils] - ExtentTest initialized for: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:39:07 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:39:07 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:39:08 [main] [LogUtils] - Driver initialized in TestContext - ChromeDriver: chrome on windows (5a0e88689f84deae18a46d75df4afba1)
-[INFO] 23-02-2026 13:39:08 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:39:08 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:39:08 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:39:12 [main] [LogUtils] - Open URL: http://automationexercise.com
-[INFO] 23-02-2026 13:39:12 [main] [LogUtils] - Verify By.xpath: //img[@alt='Website for automation practice'] is displayed
-[INFO] 23-02-2026 13:39:12 [main] [LogUtils] - Home page is visible successfully
-[INFO] 23-02-2026 13:39:14 [main] [LogUtils] - Click element By.xpath: //a[normalize-space()='Contact us']
-[INFO] 23-02-2026 13:39:14 [main] [LogUtils] - Verify By.xpath: //h2[contains(text(),'Get In Touch')] is displayed
-[INFO] 23-02-2026 13:39:14 [main] [LogUtils] - Get text: GET IN TOUCH
-[INFO] 23-02-2026 13:39:14 [main] [LogUtils] - Verify equals: GET IN TOUCH and GET IN TOUCH
-[INFO] 23-02-2026 13:39:14 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:39:14 [main] [LogUtils] - Set text: John Doe on element By.xpath: //div[@class='form-group col-md-6']//input[@type='text']
-[INFO] 23-02-2026 13:39:14 [main] [LogUtils] - Set text: johndoe@example.com on element By.xpath: //div[@class='form-group col-md-6']//input[@type='email']
-[INFO] 23-02-2026 13:39:14 [main] [LogUtils] - Set text: Test Subject on element By.xpath: //div[@class='form-group col-md-12']//input[@type='text']
-[INFO] 23-02-2026 13:39:15 [main] [LogUtils] - Set text: This is a test message on element By.cssSelector: #message
-[INFO] 23-02-2026 13:39:15 [main] [LogUtils] - Entered contact details: John Doe, johndoe@example.com, Test Subject, This is a test message
-[ERROR] 23-02-2026 13:39:15 [main] [LogUtils] - File not found: test_file.txt
-[INFO] 23-02-2026 13:39:15 [main] [LogUtils] - Step failed - capturing screenshot
-[INFO] 23-02-2026 13:39:15 [main] [LogUtils] - SCENARIO FINISHED: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:39:15 [main] [LogUtils] - SCENARIO STATUS: FAILED
-[INFO] 23-02-2026 13:39:15 [main] [LogUtils] - ========================================
-
-[INFO] 23-02-2026 13:39:15 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:39:15 [main] [LogUtils] - TEST SUITE COMPLETED
-[INFO] 23-02-2026 13:39:15 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:40:58 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:40:58 [main] [LogUtils] - STARTING TEST SUITE
-[INFO] 23-02-2026 13:40:58 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:40:58 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:40:58 [main] [LogUtils] - SCENARIO START: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:40:58 [main] [LogUtils] - SCENARIO STATUS: Starting
-[INFO] 23-02-2026 13:40:59 [main] [LogUtils] - ExtentTest initialized for: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:40:59 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:40:59 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:41:00 [main] [LogUtils] - Driver initialized in TestContext - ChromeDriver: chrome on windows (4fc14c5779d08825192dfa35ca039874)
-[INFO] 23-02-2026 13:41:00 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:41:00 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:41:00 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:41:04 [main] [LogUtils] - Open URL: http://automationexercise.com
-[INFO] 23-02-2026 13:41:04 [main] [LogUtils] - Verify By.xpath: //img[@alt='Website for automation practice'] is displayed
-[INFO] 23-02-2026 13:41:04 [main] [LogUtils] - Home page is visible successfully
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Click element By.xpath: //a[normalize-space()='Contact us']
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Verify By.xpath: //h2[contains(text(),'Get In Touch')] is displayed
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Get text: GET IN TOUCH
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Verify equals: GET IN TOUCH and GET IN TOUCH
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Set text: John Doe on element By.xpath: //div[@class='form-group col-md-6']//input[@type='text']
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Set text: johndoe@example.com on element By.xpath: //div[@class='form-group col-md-6']//input[@type='email']
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Set text: Test Subject on element By.xpath: //div[@class='form-group col-md-12']//input[@type='text']
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Set text: This is a test message on element By.cssSelector: #message
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Entered contact details: John Doe, johndoe@example.com, Test Subject, This is a test message
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - File exists, proceeding with upload: D:\CodeProject\Java\MyProject\CucumberBDDProject\CucumberMiniFramework\cucumber_hybrid_framework\data\test_file.txt
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Upload file: D:\CodeProject\Java\MyProject\CucumberBDDProject\CucumberMiniFramework\cucumber_hybrid_framework\data\test_file.txt on element By.xpath: //input[@type='file']
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Uploaded file: D:\CodeProject\Java\MyProject\CucumberBDDProject\CucumberMiniFramework\cucumber_hybrid_framework\data\test_file.txt
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Click element By.xpath: //input[@type='submit']
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Alert accepted
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Clicked OK on alert
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Verify By.xpath: //div[@class='status alert alert-success'] is displayed
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Get text: Success! Your details have been submitted successfully.
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Verify equals: Success! Your details have been submitted successfully. and Success! Your details have been submitted successfully.
-[INFO] 23-02-2026 13:41:06 [main] [LogUtils] - Success message verified: Success! Your details have been submitted successfully.
-[INFO] 23-02-2026 13:41:08 [main] [LogUtils] - Click element By.xpath: //span[contains(text(),'Home')]
-[INFO] 23-02-2026 13:41:08 [main] [LogUtils] - Verify By.xpath: //img[@src='/static/images/home/logo.png'] is displayed
-[INFO] 23-02-2026 13:41:08 [main] [LogUtils] - Successfully landed on home page
-[INFO] 23-02-2026 13:41:08 [main] [LogUtils] - SCENARIO FINISHED: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:41:08 [main] [LogUtils] - SCENARIO STATUS: PASSED
-[INFO] 23-02-2026 13:41:09 [main] [LogUtils] - ========================================
-
-[INFO] 23-02-2026 13:41:09 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:41:09 [main] [LogUtils] - TEST SUITE COMPLETED
-[INFO] 23-02-2026 13:41:09 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:51:12 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:51:12 [main] [LogUtils] - STARTING TEST SUITE
-[INFO] 23-02-2026 13:51:12 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:51:12 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:51:13 [main] [LogUtils] - SCENARIO START: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:51:13 [main] [LogUtils] - SCENARIO STATUS: Starting
-[INFO] 23-02-2026 13:51:13 [main] [LogUtils] - ExtentTest initialized for: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:51:13 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:51:13 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:51:15 [main] [LogUtils] - Driver initialized in TestContext - ChromeDriver: chrome on windows (3d21bd29df4ae3132b1e08d1dc1e4e78)
-[INFO] 23-02-2026 13:51:15 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:51:15 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:51:16 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:51:19 [main] [LogUtils] - Open URL: http://automationexercise.com
-[INFO] 23-02-2026 13:51:20 [main] [LogUtils] - Verify By.xpath: //img[@alt='Website for automation practice'] is displayed
-[INFO] 23-02-2026 13:51:20 [main] [LogUtils] - Home page is visible successfully
-[INFO] 23-02-2026 13:51:22 [main] [LogUtils] - Click element By.xpath: //a[normalize-space()='Contact us']
-[INFO] 23-02-2026 13:51:22 [main] [LogUtils] - Verify By.xpath: //h2[contains(text(),'Get In Touch')] is displayed
-[INFO] 23-02-2026 13:51:22 [main] [LogUtils] - Get text: GET IN TOUCH
-[INFO] 23-02-2026 13:51:22 [main] [LogUtils] - Verify equals: GET IN TOUCH and GET IN TOUCH
-[INFO] 23-02-2026 13:51:22 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/automation_exercise.properties, src/main/resources/cucumber.properties]
-[INFO] 23-02-2026 13:51:23 [main] [LogUtils] - Set text: John Doe on element By.xpath: //div[@class='form-group col-md-6']//input[@type='text']
-[INFO] 23-02-2026 13:51:23 [main] [LogUtils] - Set text: johndoe@example.com on element By.xpath: //div[@class='form-group col-md-6']//input[@type='email']
-[INFO] 23-02-2026 13:51:23 [main] [LogUtils] - Set text: Test Subject on element By.xpath: //div[@class='form-group col-md-12']//input[@type='text']
-[INFO] 23-02-2026 13:51:23 [main] [LogUtils] - Set text: This is a test message on element By.cssSelector: #message
-[INFO] 23-02-2026 13:51:23 [main] [LogUtils] - Entered contact details: John Doe, johndoe@example.com, Test Subject, This is a test message
-[INFO] 23-02-2026 13:51:23 [main] [LogUtils] - File exists, proceeding with upload: D:\CodeProject\Java\MyProject\CucumberBDDProject\CucumberMiniFramework\cucumber_hybrid_framework\data\test_file.txt
-[INFO] 23-02-2026 13:51:23 [main] [LogUtils] - Upload file: D:\CodeProject\Java\MyProject\CucumberBDDProject\CucumberMiniFramework\cucumber_hybrid_framework\data\test_file.txt on element By.xpath: //input[@type='file']
-[INFO] 23-02-2026 13:51:23 [main] [LogUtils] - Uploaded file: D:\CodeProject\Java\MyProject\CucumberBDDProject\CucumberMiniFramework\cucumber_hybrid_framework\data\test_file.txt
-[INFO] 23-02-2026 13:51:24 [main] [LogUtils] - Click element By.xpath: //input[@type='submit']
-[INFO] 23-02-2026 13:51:24 [main] [LogUtils] - Alert accepted
-[INFO] 23-02-2026 13:51:24 [main] [LogUtils] - Clicked OK on alert
-[INFO] 23-02-2026 13:51:24 [main] [LogUtils] - Verify By.xpath: //div[@class='status alert alert-success'] is displayed
-[INFO] 23-02-2026 13:51:24 [main] [LogUtils] - Get text: Success! Your details have been submitted successfully.
-[INFO] 23-02-2026 13:51:24 [main] [LogUtils] - Verify equals: Success! Your details have been submitted successfully. and Success! Your details have been submitted successfully.
-[INFO] 23-02-2026 13:51:24 [main] [LogUtils] - Success message verified: Success! Your details have been submitted successfully.
-[INFO] 23-02-2026 13:51:26 [main] [LogUtils] - Click element By.xpath: //span[contains(text(),'Home')]
-[INFO] 23-02-2026 13:51:26 [main] [LogUtils] - Verify By.xpath: //img[@src='/static/images/home/logo.png'] is displayed
-[INFO] 23-02-2026 13:51:26 [main] [LogUtils] - Successfully landed on home page
-[INFO] 23-02-2026 13:51:26 [main] [LogUtils] - SCENARIO FINISHED: Submit Contact Us Form successfully
-[INFO] 23-02-2026 13:51:26 [main] [LogUtils] - SCENARIO STATUS: PASSED
-[INFO] 23-02-2026 13:51:26 [main] [LogUtils] - ========================================
-
-[INFO] 23-02-2026 13:51:26 [main] [LogUtils] - ========================================
-[INFO] 23-02-2026 13:51:26 [main] [LogUtils] - TEST SUITE COMPLETED
-[INFO] 23-02-2026 13:51:26 [main] [LogUtils] - ========================================
+[INFO] 01-03-2026 15:11:07 [main] [LogUtils] - ========================================
+[INFO] 01-03-2026 15:11:07 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 01-03-2026 15:11:07 [main] [LogUtils] - ========================================
