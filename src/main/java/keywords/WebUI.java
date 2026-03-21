@@ -1,6 +1,5 @@
 package keywords;
 
-import com.aventstack.extentreports.Status;
 import constants.ConstantGlobal;
 import factory.DriverManager;
 import helpers.CaptureHelper;
@@ -8,6 +7,7 @@ import helpers.PropertiesHelper;
 import helpers.SystemHelper;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -18,14 +18,14 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import reports.AllureManager;
-import reports.ExtentTestManager;
+
 import utils.LogUtils;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.locks.LockSupport;
 
 public class WebUI {
     private final static long EXPLICIT_TIMEOUT = Long.parseLong(ConstantGlobal.EXPLICIT_TIMEOUT);
@@ -65,11 +65,12 @@ public class WebUI {
     }
 
     public static void sleep(double second) {
-        try {
-            Thread.sleep((long) (1000 * second));
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        if (second <= 0) {
+            return;
         }
+
+        long nanos = (long) (second * 1_000_000_000L);
+        LockSupport.parkNanos(nanos);
     }
 
     public static void logConsole(Object message) {
@@ -171,7 +172,12 @@ public class WebUI {
         waitForPageLoaded();
         waitForElementVisible(by);
         sleep(STEP_TIME);
-        getWebElement(by).click();
+        try {
+            getWebElement(by).click();
+        } catch (ElementClickInterceptedException e) {
+            LogUtils.warn("Click intercepted for " + by + ", fallback to JS click");
+            ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].click();", getWebElement(by));
+        }
         LogUtils.info("Click element " + by);
       //  ExtentTestManager.logMessage(Status.PASS, "Click element " + by);
 
@@ -185,7 +191,12 @@ public class WebUI {
         waitForPageLoaded();
         waitForElementVisible(by, timeout);
         sleep(STEP_TIME);
-        getWebElement(by).click();
+        try {
+            getWebElement(by).click();
+        } catch (ElementClickInterceptedException e) {
+            LogUtils.warn("Click intercepted for " + by + ", fallback to JS click");
+            ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].click();", getWebElement(by));
+        }
         LogUtils.info("Click element " + by);
      //   ExtentTestManager.logMessage(Status.PASS, "Click element " + by);
 

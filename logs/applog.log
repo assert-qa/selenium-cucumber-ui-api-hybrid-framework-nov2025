@@ -1,0 +1,79 @@
+[INFO] 21-03-2026 22:58:49 [main] [LogUtils] - 
+========================================
+[INFO] 21-03-2026 22:58:49 [main] [LogUtils] - TEST RUN STARTED
+[INFO] 21-03-2026 22:58:49 [main] [LogUtils] - Time: 2026-03-21T15:58:48.573262500Z
+[INFO] 21-03-2026 22:58:49 [main] [LogUtils] - ========================================
+[INFO] 21-03-2026 22:58:49 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/event_hub.properties, src/main/resources/cucumber.properties]
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] - ExtentReport initialized successfully
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] - ========================================
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] - STARTING TEST SUITE
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] - ========================================
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/event_hub.properties, src/main/resources/cucumber.properties]
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] - 
+TEST CASE STARTED: User login with valid email and password
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] -   Feature: file:///D:/CodeProject/Java/MyProject/CucumberBDDProject/CucumberMiniFramework/cucumber_hybrid_framework/src/test/java/features/Login/LoginWithValidCredentials.feature
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] -   Line: 6
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] - SCENARIO START: User login with valid email and password
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] - SCENARIO STATUS: Starting
+[INFO] 21-03-2026 22:58:50 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/event_hub.properties, src/main/resources/cucumber.properties]
+[INFO] 21-03-2026 22:58:54 [main] [LogUtils] - Driver initialized for scenario: User login with valid email and password
+[INFO] 21-03-2026 22:58:54 [main] [LogUtils] - ExtentTest initialized for: User login with valid email and password
+[INFO] 21-03-2026 22:58:54 [main] [LogUtils] -   Step: I launch the browser
+[INFO] 21-03-2026 22:58:54 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/event_hub.properties, src/main/resources/cucumber.properties]
+[INFO] 21-03-2026 22:58:54 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/event_hub.properties, src/main/resources/cucumber.properties]
+[INFO] 21-03-2026 22:58:55 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/event_hub.properties, src/main/resources/cucumber.properties]
+[INFO] 21-03-2026 22:58:55 [main] [LogUtils] - Verify true: true
+[INFO] 21-03-2026 22:58:55 [main] [LogUtils] -   Step Completed: I launch the browser
+[INFO] 21-03-2026 22:58:55 [main] [LogUtils] -     Status: PASSED
+[INFO] 21-03-2026 22:58:55 [main] [LogUtils] -     Duration: 919 ms
+[INFO] 21-03-2026 22:58:55 [main] [LogUtils] -   Step: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 21-03-2026 22:58:56 [main] [LogUtils] - Open URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 21-03-2026 22:58:56 [main] [LogUtils] -   Step Completed: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 21-03-2026 22:58:56 [main] [LogUtils] -     Status: PASSED
+[INFO] 21-03-2026 22:58:56 [main] [LogUtils] -     Duration: 1439 ms
+[INFO] 21-03-2026 22:58:56 [main] [LogUtils] -   Step: I verify that login page is visible successfully
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] - Verify By.xpath: //input[@id='email'] is displayed
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] - Verify By.xpath: //input[@id='password'] is displayed
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] - Verify By.xpath: //button[@id='login-btn'] is displayed
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] -   Step Completed: I verify that login page is visible successfully
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] -     Status: PASSED
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] -     Duration: 447 ms
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] -   Step: I enter correct email address and password
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] - Properties loaded from multiple files: [src/main/resources/config.properties, src/main/java/objects/event_hub.properties, src/main/resources/cucumber.properties]
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] - Set text: tests@mail.com on element By.xpath: //input[@id='email']
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] - Set text: Test@123 on element By.xpath: //input[@id='password']
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] -   Step Completed: I enter correct email address and password
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] -     Status: PASSED
+[INFO] 21-03-2026 22:58:57 [main] [LogUtils] -     Duration: 615 ms
+[INFO] 21-03-2026 22:58:58 [main] [LogUtils] -   Step: I click "sign in" button
+[INFO] 21-03-2026 22:58:58 [main] [LogUtils] - Click element By.xpath: //button[@id='login-btn']
+[INFO] 21-03-2026 22:58:58 [main] [LogUtils] -   Step Completed: I click "sign in" button
+[INFO] 21-03-2026 22:58:58 [main] [LogUtils] -     Status: PASSED
+[INFO] 21-03-2026 22:58:58 [main] [LogUtils] -     Duration: 232 ms
+[INFO] 21-03-2026 22:58:58 [main] [LogUtils] -   Step: I verify that "Logged in as user email" is visible
+[INFO] 21-03-2026 22:58:59 [main] [LogUtils] - Get text: tests@mail.com
+[INFO] 21-03-2026 22:58:59 [main] [LogUtils] - Verify equals: tests@mail.com and tests@mail.com
+[INFO] 21-03-2026 22:58:59 [main] [LogUtils] -   Step Completed: I verify that "Logged in as user email" is visible
+[INFO] 21-03-2026 22:58:59 [main] [LogUtils] -     Status: PASSED
+[INFO] 21-03-2026 22:58:59 [main] [LogUtils] -     Duration: 1329 ms
+[INFO] 21-03-2026 22:58:59 [main] [LogUtils] - SCENARIO FINISHED: User login with valid email and password
+[INFO] 21-03-2026 22:58:59 [main] [LogUtils] - SCENARIO STATUS: PASSED
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - ========================================
+
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - 
+TEST CASE FINISHED: User login with valid email and password
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] -   Status: PASSED
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] -   Duration: 10844 ms
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - ----------------------------------------
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - ========================================
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - ========================================
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - 
+========================================
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - TEST RUN FINISHED
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - Time: 2026-03-21T15:59:01.271852800Z
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - ========================================
+
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - Flushing Extent Report...
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - Extent Report flushed successfully
+[INFO] 21-03-2026 22:59:01 [main] [LogUtils] - Please check the exports/ExtentReport folder for the HTML report

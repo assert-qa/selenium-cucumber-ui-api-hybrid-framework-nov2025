@@ -1,12 +1,13 @@
 Feature: Login with Invalid Credentials
+  As a new user
+  I want to login with registered account with incorrect email and password
+  So that I can verify that error message is displayed and user is not able to login to the application
 
-  @smokeTest
   Scenario: User login with incorrect email and password
     Given I launch the browser
-    When I navigate to url "http://automationexercise.com"
-    Then I verify that home page is visible successfully
-    When I click on "Signup / Login" button
-    Then I verify "Login to your account" is visible
-    When I enter email "wrongemail@test.com" and password "wrongpassword"
-    And I click "login" button
-    Then I verify error "Your email or password is incorrect!" is visible
+    When I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+    Then I verify that login page is visible successfully
+    When I enter incorrect email address and password
+    And I click "sign in" button
+    Then I verify error "Invalid email or password" is visible
+

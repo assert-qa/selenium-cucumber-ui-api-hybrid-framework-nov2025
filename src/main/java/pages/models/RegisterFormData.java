@@ -10,19 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RegisterFormData {
-    private String title;
+    private String email;
     private String password;
-    private String day;
-    private String month;
-    private String year;
-    private String firstName;
-    private String lastName;
-    private String company;
-    private String address;
-    private String address2;
-    private String country;
-    private String state;
-    private String city;
-    private String zipCode;
-    private String mobileNumber;
+    private String confirmPassword;
 }

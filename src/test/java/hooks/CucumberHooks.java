@@ -1,16 +1,14 @@
 package hooks;
 
-import common.BaseTest;
+import factory.DriverFactory;
 import factory.DriverManager;
 import helpers.PropertiesHelper;
 import io.cucumber.java.*;
 import reports.ExtentTestManager;
 import utils.LogUtils;
-import com.aventstack.extentreports.Status;
 
-public class CucumberHooks extends BaseTest {
+public class CucumberHooks {
     private static final String SEPARATOR = "=".repeat(40);
-    private String currentStepText = "";
 
     @BeforeAll
     public static void beforeAll() {
@@ -31,6 +29,11 @@ public class CucumberHooks extends BaseTest {
     public void beforeScenario(Scenario scenario) {
         LogUtils.info("SCENARIO START: " + scenario.getName());
         LogUtils.info("SCENARIO STATUS: Starting");
+
+        if (DriverManager.getDriver() == null) {
+            new DriverFactory().createDriver();
+            LogUtils.info("Driver initialized for scenario: " + scenario.getName());
+        }
 
         try {
             String testName = scenario.getName();
@@ -85,13 +88,4 @@ public class CucumberHooks extends BaseTest {
         TestContext.reset();
     }
 
-    @BeforeStep
-    public void beforeStep(Scenario scenario) {
-        // Store current step for use in afterStep
-    }
-
-    @AfterStep
-    public void afterStep(Scenario scenario) {
-        // Screenshot handling is now in CucumberReportListener.handleTestStepFinished
-    }
 }

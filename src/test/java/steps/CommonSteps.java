@@ -1,206 +1,49 @@
 package steps;
 
-import common.BaseTest;
-import constants.ConstantGlobal;
 import factory.DriverManager;
-import hooks.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import keywords.WebUI;
-import pages.ContactUsPage;
+import org.openqa.selenium.By;
 import pages.LoginPage;
-import pages.ProductPage;
-import pages.TestCasePage;
-import reports.ExtentTestManager;
-import utils.LogUtils;
+
+import java.util.Locale;
+import java.util.Properties;
+
+import static helpers.PropertiesHelper.loadAllFiles;
 
 public class CommonSteps {
-    private TestContext testContext;
-    private LoginPage loginPage;
-    private ContactUsPage contactUsPage;
-    private TestCasePage testCasePage;
-    private ProductPage productPage;
-    private static String GENERATED_NAME = null;
 
-    public CommonSteps(TestContext testContext) {
-        this.testContext = testContext;
-        // Always initialize page objects from the test context to ensure they are shared across steps
-        this.loginPage = testContext.getLoginPage();
-        this.contactUsPage = testContext.getContactUsPage();
-        this.testCasePage = testContext.getTestCasePage();
-        this.productPage = testContext.getProductPage();
-    }
-
-    public CommonSteps() {
-        this(new TestContext());
-    }
-
-    public static void setGeneratedName(String name) {
-        GENERATED_NAME = name;
-    }
+    private final LoginPage loginPage = new LoginPage();
+    private final Properties setUp = loadAllFiles();
 
     @Given("I launch the browser")
     public void iLaunchTheBrowser() {
-        if (DriverManager.getDriver() == null) {
-            BaseTest.createDriver();
-            LogUtils.info("Browser launched successfully");
-            ExtentTestManager.logMessage("Browser launched successfully");
-        }
+        WebUI.verifyTrue(DriverManager.getDriver() != null,
+                "WebDriver is not initialized. Please check CucumberHooks @Before setup.");
     }
 
     @When("I navigate to url {string}")
     public void iNavigateToUrl(String url) {
         WebUI.openURL(url);
-        ExtentTestManager.logMessage("Navigated to: " + url);
     }
 
-    @Then("I verify that home page is visible successfully")
-    public void iVerifyThatHomePageIsVisibleSuccessfully() {
-        if (loginPage.verifyHomePageIsVisible()) {
-            LogUtils.info("Home page is visible successfully");
-            ExtentTestManager.logMessage("Home page is visible successfully");
-        } else {
-            LogUtils.error("Home page is not visible");
-        }
-    }
-
-    @When("I click on {string} button")
-    public void iClickOnButton(String buttonName) {
-        if (buttonName.equalsIgnoreCase("Signup / Login")) {
-            loginPage.goToLoginPage();
-            ExtentTestManager.logMessage("Clicked on '" + buttonName + "' button");
-        } else if (buttonName.equalsIgnoreCase("Contact us")) {
-            contactUsPage.goToContactUsPage();
-            ExtentTestManager.logMessage("Clicked on 'Contact Us' button");
-        } else if (buttonName.equalsIgnoreCase("Test Cases")) {
-            testCasePage.goToTestCasePage();
-            ExtentTestManager.logMessage("Clicked on 'Test Cases' button");
-        } else if (buttonName.equalsIgnoreCase("Products")) {
-            productPage.goToProductPage();
-            ExtentTestManager.logMessage("Clicked on 'Products' button");
-        }
+    @Then("I verify that login page is visible successfully")
+    public void iVerifyThatLoginPageIsVisibleSuccessfully() {
+        WebUI.verifyElementVisible(By.xpath(setUp.getProperty("EMAIL")), "Email field is not visible.");
+        WebUI.verifyElementVisible(By.xpath(setUp.getProperty("PASSWORD")), "Password field is not visible.");
+        WebUI.verifyElementVisible(By.xpath(setUp.getProperty("SIGN_IN_BUTTON")), "Sign in button is not visible.");
     }
 
     @When("I click {string} button")
     public void iClickButton(String buttonName) {
-        switch (buttonName.toLowerCase()) {
-            case "login":
-                loginPage.clickLoginButton();
-                ExtentTestManager.logMessage("Clicked 'login' button");
-                break;
-            case "signup":
-                loginPage.clickSignUpButton();
-                ExtentTestManager.logMessage("Clicked 'Signup' button");
-                break;
-            case "create account":
-                loginPage.createAccountButton();
-                ExtentTestManager.logMessage("Clicked 'Create Account' button");
-                break;
-            case "continue":
-                loginPage.clickContinueButton();
-                ExtentTestManager.logMessage("Clicked 'Continue' button");
-                break;
-            case "delete account":
-                WebUI.sleep(Double.parseDouble(ConstantGlobal.HARD_WAIT_TIMEOUT));
-                loginPage.clickDeleteAccountButton();
-                ExtentTestManager.logMessage("Clicked 'Delete Account' button");
-                break;
-            case "logout":
-                loginPage.clickLogoutButton();
-                ExtentTestManager.logMessage("Clicked 'Logout' button");
-                break;
-            case "submit":
-                contactUsPage.clickSubmitContactButton();
-                ExtentTestManager.logMessage("Clicked 'Submit' button");
-                break;
-            case "home":
-                contactUsPage.clickHomeButton();
-                ExtentTestManager.logMessage("Clicked 'Home' button");
-                break;
-            default:
-                throw new IllegalArgumentException("Button not supported: " + buttonName);
-        }
-    }
+        String normalizedButton = buttonName.trim().toLowerCase(Locale.ROOT);
 
-    @When("I click OK on alert")
-    public void iClickOKOnAlert() {
-        contactUsPage.clickOkButton();
-        LogUtils.info("Clicked OK on alert");
-        ExtentTestManager.logMessage("Alert accepted");
-    }
-
-    @Then("I verify {string} is visible")
-    public void iVerifyIsVisible(String expectedText) {
-        String actualResult;
-        switch (expectedText) {
-            case "Login to your account" -> {
-                actualResult = loginPage.verifyLoginLabel();
-                WebUI.verifyEquals(actualResult, expectedText);
-                ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
-            }
-            case "New User Signup!" -> {
-                actualResult = loginPage.verifyNewUserSignupIsVisible();
-                WebUI.verifyEquals(actualResult, expectedText);
-                ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
-            }
-            case "GET IN TOUCH" -> {
-                actualResult = contactUsPage.verifyGetInTouchIsVisible();
-                WebUI.verifyEquals(actualResult, expectedText);
-                ExtentTestManager.logMessage("Verified: '" + expectedText + "' is visible");
-            }
-        }
-    }
-
-    @Then("I verify that {string} is visible")
-    public void iVerifyThatIsVisible(String expectedText) {
-        String actualResult = "";
-
-        if (expectedText.equalsIgnoreCase("ENTER ACCOUNT INFORMATION")) {
-            actualResult = loginPage.verifyAccountInformationIsVisible();
-            WebUI.verifyEquals(actualResult, expectedText);
-            ExtentTestManager.logMessage("Verified: " + actualResult);
-        } else if (expectedText.equalsIgnoreCase("ACCOUNT CREATED!")) {
-            actualResult = loginPage.verifyAccountWasCreatedIsVisible();
-            WebUI.verifyEquals(actualResult, expectedText);
-            ExtentTestManager.logMessage("Verified: " + actualResult);
-        } else if (expectedText.toLowerCase().startsWith("logged in as ")) {
-            if (expectedText.equalsIgnoreCase("Logged in as username") || expectedText.toLowerCase().contains(" username")) {
-                actualResult = loginPage.verifyLoggedInAsUserNameIsVisible("username");
-                if (actualResult.startsWith("Logged in as ")) {
-                    LogUtils.info("Verified dynamic logged-in user: " + actualResult);
-                    WebUI.verifyEquals(actualResult.startsWith("Logged in as ") ? "Logged in as " : actualResult, "Logged in as ");
-                } else {
-                    WebUI.verifyEquals(actualResult, expectedText);
-                }
-            } else {
-                String userName = GENERATED_NAME != null ? GENERATED_NAME : ConstantGlobal.USERNAME;
-                actualResult = loginPage.verifyLoggedInAsUserNameIsVisible(userName);
-                WebUI.verifyEquals(actualResult, expectedText);
-            }
-            ExtentTestManager.logMessage("Verified: " + actualResult);
-        } else if (expectedText.equalsIgnoreCase("ACCOUNT DELETED!")) {
-            actualResult = loginPage.verifyAccountDeletedIsVisible();
-            WebUI.verifyEquals(actualResult, expectedText);
-            ExtentTestManager.logMessage("Verified: " + actualResult);
-        } else {
-            throw new IllegalArgumentException("Text verification not supported: " + expectedText);
-        }
-    }
-
-    @Then("I verify error message {string} is visible")
-    public void iVerifyErrorMessageIsVisible(String errorMessage) {
-        String actualError;
-        if (errorMessage.equals("Email Address already exist!")) {
-            actualError = loginPage.verifySignUpInLineErrorMessage();
-            WebUI.verifyEquals(actualError, errorMessage);
-            ExtentTestManager.logMessage("Verified error message: " + errorMessage);
-        } else if (errorMessage.equals("Your email or password is incorrect!")) {
-            actualError = loginPage.verifyInlineErrorMessage();
-            WebUI.verifyEquals(actualError, errorMessage);
-            ExtentTestManager.logMessage("Verified error message: " + errorMessage);
-        } else {
-            throw new IllegalArgumentException("Error message verification not supported: " + errorMessage);
+        switch (normalizedButton) {
+            case "sign in", "login" -> loginPage.clickSignInButton();
+            case "log out", "logout" -> loginPage.clickLogOutButton();
+            default -> throw new IllegalArgumentException("Unsupported button in common step: " + buttonName);
         }
     }
 }

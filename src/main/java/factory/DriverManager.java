@@ -18,11 +18,17 @@ public class DriverManager {
     }
 
     public static void quit() {
-        DriverManager.driver.get().quit();
+        WebDriver activeDriver = DriverManager.driver.get();
+        if (activeDriver != null) {
+            activeDriver.quit();
+        }
         driver.remove();
     }
 
     public static void close() {
-        DriverManager.driver.get().close();
+        WebDriver activeDriver = DriverManager.driver.get();
+        if (activeDriver != null) {
+            activeDriver.close();
+        }
     }
 }

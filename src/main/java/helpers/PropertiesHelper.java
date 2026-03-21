@@ -10,88 +10,76 @@ import java.util.Properties;
 
 public class PropertiesHelper {
     private static Properties properties;
-    private static String linkFile;
-    private static FileInputStream file;
-    private static FileOutputStream out;
-    private static String relPropertiesFilePathDefault = "src/main/resources/config.properties";
+    private static final String relPropertiesFilePathDefault = "src/main/resources/config.properties";
 
-    public static Properties loadAllFiles(){
+    public static synchronized Properties loadAllFiles(){
         LinkedList<String> files = new LinkedList<>();
         files.add("src/main/resources/config.properties");
-        files.add("src/main/java/objects/automation_exercise.properties");
+        files.add("src/main/java/objects/event_hub.properties");
         files.add("src/main/resources/cucumber.properties");
 
         try {
-            properties = new Properties();
+            Properties merged = new Properties();
             for (String filePath : files) {
                 Properties tempProp = new Properties();
-                linkFile = SystemHelper.getCurrentDir() + filePath;
-                file = new FileInputStream(linkFile);
-                tempProp.load(file);
-                properties.putAll(tempProp);
+                String linkFile = SystemHelper.getCurrentDir() + filePath;
+                try (FileInputStream input = new FileInputStream(linkFile)) {
+                    tempProp.load(input);
+                }
+                merged.putAll(tempProp);
             }
+            properties = merged;
             LogUtils.info("Properties loaded from multiple files: " + files);
-            return properties;
+            return merged;
         }catch (IOException ioe){
+            LogUtils.error("Failed to load one or more properties files: " + ioe.getMessage());
             return new Properties();
         }
     }
 
-    public static void setFile(String relPropertiesFilePath){
+    public static synchronized void setFile(String relPropertiesFilePath){
         properties = new Properties();
         try {
-            linkFile = SystemHelper.getCurrentDir() + relPropertiesFilePath;
-            file = new FileInputStream(linkFile);
-            properties.load(file);
-            file.close();
+            String linkFile = SystemHelper.getCurrentDir() + relPropertiesFilePath;
+            try (FileInputStream input = new FileInputStream(linkFile)) {
+                properties.load(input);
+            }
         } catch (Exception e){
             LogUtils.error("Failed to load properties file: ("+relPropertiesFilePath+"): "+ e.getMessage());
         }
     }
 
-    public static void setDefaultFile(){
+    public static synchronized void setDefaultFile(){
         properties = new Properties();
         try {
-            linkFile = SystemHelper.getCurrentDir() + relPropertiesFilePathDefault;
-            file = new FileInputStream(linkFile);
-            properties.load(file);
-            file.close();
+            String linkFile = SystemHelper.getCurrentDir() + relPropertiesFilePathDefault;
+            try (FileInputStream input = new FileInputStream(linkFile)) {
+                properties.load(input);
+            }
         } catch (Exception e){
             LogUtils.error("Failed to load default properties file: ("+relPropertiesFilePathDefault+"): "+ e.getMessage());
         }
     }
 
-    public static String getValue(String key){
-        String value = null;
-        try {
-            if (file == null) {
-                properties = new Properties();
-                linkFile = SystemHelper.getCurrentDir() + relPropertiesFilePathDefault;
-                file = new FileInputStream(linkFile);
-                properties.load(file);
-                file.close();
-            }
-            value = properties.getProperty(key);
-        }catch (IOException ioe){
-            LogUtils.error("Failed to get value from properties file for key: ("+key+"): "+ ioe.getMessage());
+    public static synchronized String getValue(String key){
+        if (properties == null || properties.isEmpty()) {
+            loadAllFiles();
         }
-        return value;
+        return properties.getProperty(key);
     }
 
-    public static void setValue(String key, String keyValue){
+    public static synchronized void setValue(String key, String keyValue){
         try {
-            if (file == null) {
-                properties = new Properties();
-                file = new FileInputStream(SystemHelper.getCurrentDir() + relPropertiesFilePathDefault);
-                properties.load(file);
-                file.close();
-                out = new FileOutputStream(SystemHelper.getCurrentDir() + relPropertiesFilePathDefault);
+            if (properties == null || properties.isEmpty()) {
+                setDefaultFile();
             }
-            out = new FileOutputStream(linkFile);
+
+            String linkFile = SystemHelper.getCurrentDir() + relPropertiesFilePathDefault;
             LogUtils.info(linkFile);
             properties.setProperty(key, keyValue);
-            properties.store(out, null);
-            out.close();
+            try (FileOutputStream out = new FileOutputStream(linkFile)) {
+                properties.store(out, null);
+            }
         }catch (Exception e){
             LogUtils.error("Failed to set value in properties file for key: ("+key+"): "+ e.getMessage());
         }

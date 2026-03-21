@@ -1,84 +1,38 @@
 package common;
 
 import constants.ConstantGlobal;
+import factory.DriverFactory;
 import factory.DriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import utils.LogUtils;
 
 public class BaseTest {
 
     public static void createDriver(){
-        WebDriver driver = setupBrowser(ConstantGlobal.BROWSER);
-        DriverManager.setDriver(driver);
+        if (DriverManager.getDriver() == null) {
+            new DriverFactory().createDriver(ConstantGlobal.BROWSER);
+        }
     }
 
     public static void createDriver(String browser){
-        WebDriver driver = setupBrowser(browser);
-        DriverManager.setDriver(driver);
+        if (DriverManager.getDriver() == null) {
+            new DriverFactory().createDriver(browser);
+        }
     }
 
     public static WebDriver setupBrowser(String browserName){
-        return switch (browserName.trim().toLowerCase()) {
-            case "chrome" -> initChromeDriver();
-            case "firefox" -> initFirefoxDriver();
-            case "edge" -> initEdgeDriver();
-            default -> throw new IllegalArgumentException("Browser " + browserName + " not supported");
-        };
+        return new DriverFactory().createDriver(browserName);
     }
 
     public static WebDriver initChromeDriver(){
-        WebDriver driver;
-        LogUtils.info("Launching Chrome browser...");
-
-        ChromeOptions options = new ChromeOptions();
-        if (ConstantGlobal.HEADLESS){
-            options.addArguments("--headless=new");
-            options.addArguments("window-size=1920,1080");
-        } else {
-            options.addArguments("--start-maximized");
-        }
-
-        driver = new ChromeDriver(options);
-        return driver;
+        return new DriverFactory().createDriver("chrome");
     }
 
     public static WebDriver initFirefoxDriver(){
-        WebDriver driver;
-        LogUtils.info("Launching Firefox browser...");
-
-        FirefoxOptions options = new FirefoxOptions();
-        if (ConstantGlobal.HEADLESS){
-            options.addArguments("--headless");
-            options.addArguments("--width=1920");
-            options.addArguments("--height=1080");
-        } else {
-            options.addArguments("--start-maximized");
-        }
-
-        driver = new FirefoxDriver(options);
-        return driver;
+        return new DriverFactory().createDriver("firefox");
     }
 
     public static WebDriver initEdgeDriver(){
-        WebDriver driver;
-        LogUtils.info("Launching Edge browser...");
-
-        EdgeOptions options = new EdgeOptions();
-        if (ConstantGlobal.HEADLESS){
-            options.addArguments("--headless=new");
-            options.addArguments("window-size=1920,1080");
-        } else {
-            options.addArguments("--start-maximized");
-        }
-
-        driver = new EdgeDriver(options);
-        return driver;
+        return new DriverFactory().createDriver("edge");
     }
 
 }

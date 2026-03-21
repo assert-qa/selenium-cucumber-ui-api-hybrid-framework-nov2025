@@ -1,22 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Cucumber Automation Test Suite" verbose="1" parallel="false">
+<suite name="Cucumber Automation Test Suite" verbose="1" parallel="tests" thread-count="4">
     <listeners>
         <!-- Allure TestNG Listener -->
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
-
-    <test name="Contact Us Form Test">
-        <classes>
-            <class name="runner.TestRunnerContactUsForm"/>
-        </classes>
-    </test>
-
-    <test name="Login With Invalid Credentials Test">
-        <classes>
-            <class name="runner.TestRunnerLoginWithInvalidCredentials"/>
-        </classes>
-    </test>
 
     <test name="Login With Valid Credentials Test">
         <classes>
@@ -24,34 +12,5 @@
         </classes>
     </test>
 
-    <test name="Logout User Test">
-        <classes>
-            <class name="runner.TestRunnerLogoutUser"/>
-        </classes>
-    </test>
-
-    <test name="Product Detail Page Test">
-        <classes>
-            <class name="runner.TestRunnerProductDetailPage"/>
-        </classes>
-    </test>
-
-    <test name="Register User Test">
-        <classes>
-            <class name="runner.TestRunnerRegisterUser"/>
-        </classes>
-    </test>
-
-    <test name="Register User With Existing Email Test">
-        <classes>
-            <class name="runner.TestRunnerRegisterUserWithExistingEmail"/>
-        </classes>
-    </test>
-
-    <test name="Test Cases Page Test">
-        <classes>
-            <class name="runner.TestRunnerTestCasesPage"/>
-        </classes>
-    </test>
 
 </suite>
