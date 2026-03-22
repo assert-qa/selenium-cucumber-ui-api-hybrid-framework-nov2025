@@ -1,4 +1,6 @@
 package pages;
 
-public class EventPage {
+import factory.DriverFactory;
+
+public class EventPage extends DriverFactory {
 }
