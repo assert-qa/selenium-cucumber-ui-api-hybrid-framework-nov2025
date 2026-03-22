@@ -38,3 +38,6 @@ build/
 .DS_Store
 
 /selenium-skill/
+/src/main/java/keywords/
+/src/main/java/helpers/
+/src/main/resources/env/

@@ -20,7 +20,7 @@ public class RegisterPage extends DriverFactory {
     String registerPassword = setUp.getProperty("REGISTER_PASSWORD");
     String registerConfirmPassword = setUp.getProperty("REGISTER_CONF_PASSWORD");
     String createAccountButton = setUp.getProperty("CREATE_ACCOUNT_BUTTON");
-    String registerPage = setUp.getProperty("REGISTER_PAGE");
+    String registerPage = setUp.getProperty("NAVIGATE_TO_REGISTER_PAGE");
     String successLoginLabel = setUp.getProperty("SUCCESS_LOGIN_LABEL");
     String errorToastMessage = setUp.getProperty("ERROR_TOAST_MESSAGE");
 

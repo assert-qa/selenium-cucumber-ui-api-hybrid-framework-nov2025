@@ -15,6 +15,9 @@ public class PropertiesHelper {
     public static synchronized Properties loadAllFiles(){
         LinkedList<String> files = new LinkedList<>();
         files.add("src/main/resources/config.properties");
+        files.add("src/main/resources/env/dev.properties");
+        files.add("src/main/resources/env/prod.properties");
+        files.add("src/main/resources/env/staging.properties");
         files.add("src/main/java/objects/event_hub.properties");
         files.add("src/main/resources/cucumber.properties");
 
