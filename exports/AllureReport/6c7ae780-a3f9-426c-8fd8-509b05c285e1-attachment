@@ -1,7 +1,0 @@
-=== TEST USER ACCOUNT INFORMATION ===
-
-Email: staging-user@mail.com
-Account Type: Staging Account
-Environment: staging
-Test Data Source: Per Environment Configuration
-Credentials Loaded From: env/staging.properties

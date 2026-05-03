@@ -1,8 +1,0 @@
-=== TEST RESULT SUMMARY ===
-
-Test Name: User login with incorrect email and password
-Status: PASSED
-Executed By: staging-user@mail.com
-Environment: staging
-Execution Date: 01-04-2026 23:16:40
-Browser: chrome
