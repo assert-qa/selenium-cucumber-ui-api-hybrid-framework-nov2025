@@ -3,6 +3,7 @@ package reports;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import constants.ConstantGlobal;
+import managers.ConfigManager;
 import helpers.SystemHelper;
 
 import java.io.File;
@@ -46,15 +47,20 @@ public class ExtentReportManager {
                 // ========== FIXED: Added Null Check ==========
                 extentReports.setSystemInfo("Framework Name", "Cucumber Selenium Java");
                 extentReports.setSystemInfo("Author", ConstantGlobal.AUTHOR != null ? ConstantGlobal.AUTHOR : "N/A");
-                extentReports.setSystemInfo("Browser", ConstantGlobal.BROWSER != null ? ConstantGlobal.BROWSER : "N/A");
-                extentReports.setSystemInfo("Environment", ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A");
+                extentReports.setSystemInfo("Browser", ConfigManager.getBrowser() != null ? ConfigManager.getBrowser() : "N/A");
+
+                // Use environment from ConfigManager
+                String environment = ConfigManager.getEnvironment() != null ?
+                    ConfigManager.getEnvironment() : (ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A");
+                extentReports.setSystemInfo("Environment", environment);
                 extentReports.setSystemInfo("Version", "1.0");
 
-                // ========== ENHANCEMENT: User Information ==========
-                extentReports.setSystemInfo("Test User Email", ConstantGlobal.VALID_EMAIL != null ? ConstantGlobal.VALID_EMAIL : "N/A");
+                // User Information from ConfigManager
+                String testUserEmail = ConfigManager.getValidLoginEmail() != null ?
+                    ConfigManager.getValidLoginEmail() : (ConstantGlobal.VALID_EMAIL != null ? ConstantGlobal.VALID_EMAIL : "N/A");
+                extentReports.setSystemInfo("Test User Email", testUserEmail);
                 extentReports.setSystemInfo("Test Account Type", getUserAccountType());
-                extentReports.setSystemInfo("Test Data Source", "Per Environment - " +
-                        (ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "unknown"));
+                extentReports.setSystemInfo("Test Data Source", "Environment Properties - env/" + environment + ".properties");
 
                 // ========== ENHANCEMENT: Execution Environment ==========
                 extentReports.setSystemInfo("Operating System", SystemHelper.getOSName());
@@ -75,12 +81,16 @@ public class ExtentReportManager {
 
     // ========== ENHANCEMENT: Helper Methods for User Info ==========
     private static String getUserAccountType() {
-        if (ConstantGlobal.ENV == null) {
-            System.err.println("⚠️  WARNING: ConstantGlobal.ENV is NULL! Check if properties are loaded correctly.");
+        // Use environment from ConfigManager
+        String env = ConfigManager.getEnvironment() != null ?
+            ConfigManager.getEnvironment() : ConstantGlobal.ENV;
+
+        if (env == null) {
+            System.err.println("⚠️  WARNING: Environment is NULL! Check if properties are loaded correctly.");
             return "Unknown Account";
         }
 
-        String env = ConstantGlobal.ENV.toLowerCase();
+        env = env.toLowerCase();
         if (env.contains("prod")) {
             return "Production Account";
         } else if (env.contains("staging")) {
@@ -92,15 +102,22 @@ public class ExtentReportManager {
     }
 
     public static String getFormattedUserInfo() {
+        // Use info from ConfigManager
+        String email = ConfigManager.getValidLoginEmail() != null ?
+            ConfigManager.getValidLoginEmail() : (ConstantGlobal.VALID_EMAIL != null ? ConstantGlobal.VALID_EMAIL : "N/A");
+        String environment = ConfigManager.getEnvironment() != null ?
+            ConfigManager.getEnvironment() : (ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A");
+
         return String.format(
                 "User Info:\n" +
                         "  - Email: %s\n" +
                         "  - Account Type: %s\n" +
                         "  - Environment: %s\n" +
-                        "  - Test Data Source: Per Environment Configuration",
-                ConstantGlobal.VALID_EMAIL != null ? ConstantGlobal.VALID_EMAIL : "N/A",
+                        "  - Test Data Source: Environment Properties (env/%s.properties)",
+                email,
                 getUserAccountType(),
-                ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A"
+                environment,
+                environment
         );
     }
 }

@@ -4,6 +4,8 @@
     <listeners>
         <!-- Allure TestNG Listener -->
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <!-- Retry Listener for Flaky Tests -->
+        <listener class-name="listeners.RetryListener"/>
     </listeners>
 
     <test name="Login With Valid Credentials Test">

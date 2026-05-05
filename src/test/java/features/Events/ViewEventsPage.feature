@@ -1,4 +1,4 @@
-Feature: My Events Page
+Feature: Events Page
   As a logged-in user
   I want to view my events
   So that I can manage and review them

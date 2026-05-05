@@ -8,7 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import keywords.WebUI;
 import pages.RegisterPage;
-import pages.models.RegisterFormData;
+import pages.models.RegisterFormDataObject;
 
 public class StepsRegisterUser {
     private static final String REGISTERED_USER_EXCEL_PATH = "data/DataUser.xlsx";
@@ -36,7 +36,7 @@ public class StepsRegisterUser {
     public void fillRegistrationFormWithValidDetails() {
 
 
-        RegisterFormData credentialsData = RegisterFormData.builder()
+        RegisterFormDataObject credentialsData = RegisterFormDataObject.builder()
                 .email(USER_EMAIL)
                 .password(USER_PASSWORD)
                 .confirmPassword(USER_PASSWORD)

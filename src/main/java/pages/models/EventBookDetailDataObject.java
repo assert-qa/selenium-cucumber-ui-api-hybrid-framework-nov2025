@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EventBookDetailData {
+public class EventBookDetailDataObject {
     private String fullName;
     private String email;
     private String phoneNumber;

@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import keywords.WebUI;
 import pages.LoginPage;
-import pages.models.CredentialsData;
+import pages.models.CredentialsDataObject;
 
 public class StepsLoginWithUnregisterCredentials {
     private TestContext testContext;
@@ -23,7 +23,7 @@ public class StepsLoginWithUnregisterCredentials {
 
     @When("I enter unregister email address and password")
     public void enterIncorrectEmailAndPassword() {
-        CredentialsData credentialsData = CredentialsData.builder()
+        CredentialsDataObject credentialsData = CredentialsDataObject.builder()
                 .userEmail("unregister@mail.com")
                 .userPassword("Test@123")
                 .build();

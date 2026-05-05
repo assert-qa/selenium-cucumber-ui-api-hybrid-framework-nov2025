@@ -1,11 +1,14 @@
 package steps;
 
 import factory.DriverManager;
+import helpers.PopupHelper;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import keywords.WebUI;
 import org.openqa.selenium.By;
+import pages.EventPage;
 import pages.LoginPage;
 import pages.RegisterPage;
 
@@ -18,6 +21,7 @@ public class CommonSteps {
 
     private final LoginPage loginPage = new LoginPage();
     private final RegisterPage registerPage = new RegisterPage();
+    private final EventPage eventPage = new EventPage();
     private final Properties setUp = loadAllFiles();
 
     @Given("I launch the browser")
@@ -38,6 +42,7 @@ public class CommonSteps {
         switch (normalizedTitle){
             case "sign in to eventhub" -> WebUI.verifyElementVisible(By.xpath(setUp.getProperty("LOGIN_PAGE_LABEL")), "Sign in to EventHub is not visible.");
             case "create your account" -> WebUI.verifyElementVisible(By.xpath(setUp.getProperty("REGISTER_PAGE_LABEL")), "Register page label is not visible.");
+            case "upcoming events" -> WebUI.verifyElementVisible(By.xpath(setUp.getProperty("EVENT_PAGE_LABEL")), "Event page label is not visible.");
             default -> throw new IllegalArgumentException("unsupported page title in common step: " + pageTitle);
         }
     }
@@ -47,11 +52,29 @@ public class CommonSteps {
         String normalizedButton = buttonName.trim().toLowerCase(Locale.ROOT);
 
         switch (normalizedButton) {
-            case "sign in", "login" -> loginPage.clickSignInButton();
+            case "sign in", "login" -> {
+                loginPage.clickSignInButton();
+                PopupHelper.handlePasswordManagerPopupCombined();
+                WebUI.sleep(1);
+            }
             case "log out", "logout" -> loginPage.clickLogOutButton();
             case "register" -> registerPage.goToRegisterPage();
             case "create account" -> registerPage.createAccountButton();
             default -> throw new IllegalArgumentException("Unsupported button in common step: " + buttonName);
+        }
+    }
+
+    @And("I navigate to {string} menu")
+    public void iNavigateToMenu(String menuName) {
+        String normalizedMenu = menuName.trim().toLowerCase(Locale.ROOT);
+
+        switch (normalizedMenu) {
+            case "events" -> {
+                PopupHelper.handlePasswordManagerPopupCombined();
+                WebUI.sleep(1);
+                eventPage.goToEventPage();
+            }
+            default -> throw new IllegalArgumentException("Unsupported menu in common step: " + menuName);
         }
     }
 }

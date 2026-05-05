@@ -6,7 +6,10 @@ Feature: Add New Event
   Scenario: Admin adds new event successfully
     Given I launch the browser
     When I navigate to url "https://eventhub.rahulshettyacademy.com/login"
-    Then I verify that "Sign in to EventHub" is visible successfully
+    And I enter registered email address and password
+    And I click "sign in" button
+    And I navigate to "Events" menu
+    Then I verify that "Upcoming Events" is visible successfully
 
     When I enter admin email address and password
     And I click "sign in" button

@@ -3,7 +3,7 @@ package pages;
 import factory.DriverFactory;
 import keywords.WebUI;
 import org.openqa.selenium.By;
-import pages.models.RegisterFormData;
+import pages.models.RegisterFormDataObject;
 
 import java.util.Properties;
 
@@ -28,7 +28,7 @@ public class RegisterPage extends DriverFactory {
         WebUI.clickElement(By.xpath(registerPage));
     }
 
-    public void setRegisterAccount(RegisterFormData data){
+    public void setRegisterAccount(RegisterFormDataObject data){
         if (data.getEmail() != null)
             WebUI.setText(By.xpath(registerEmail), data.getEmail());
         if (data.getPassword() != null)

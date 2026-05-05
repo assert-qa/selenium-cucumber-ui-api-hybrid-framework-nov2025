@@ -1,22 +1,20 @@
 package steps;
 
 import constants.ConstantGlobal;
+import managers.ConfigManager;
 import helpers.UserInfoHelper;
 import hooks.TestContext;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import keywords.WebUI;
 import pages.LoginPage;
-import pages.models.CredentialsData;
+import pages.models.CredentialsDataObject;
 import reports.AllureManager;
 import utils.LogUtils;
 
 public class StepsLoginWithRegisteredCredentials {
     private TestContext testContext;
     private LoginPage loginPage;
-
-    private final String validEmail = ConstantGlobal.VALID_EMAIL;
-    private final String validPassword = ConstantGlobal.VALID_PASSWORD;
 
     public StepsLoginWithRegisteredCredentials(TestContext testContext) {
         this.testContext = testContext;
@@ -29,27 +27,33 @@ public class StepsLoginWithRegisteredCredentials {
 
     @When("I enter registered email address and password")
     public void iEnterCorrectEmailAddressAndPassword() {
-        // ========== ENHANCEMENT: Log user account info ==========
-        LogUtils.info("Logging in with account: " + UserInfoHelper.getCurrentUserEmail());
-        LogUtils.info("Account Type: " + UserInfoHelper.getUserAccountType());
+        // Get credentials from ConfigManager
+        String userEmail = ConfigManager.getValidLoginEmail();
+        String userPassword = ConfigManager.getValidLoginPassword();
 
-        CredentialsData credentialsData = CredentialsData.builder()
-                .userEmail(validEmail)
-                .userPassword(validPassword)
+        LogUtils.info("Logging in with account: " + userEmail);
+        LogUtils.info("Account Type: " + UserInfoHelper.getUserAccountType());
+        LogUtils.info("Environment: " + ConfigManager.getEnvironment());
+
+        CredentialsDataObject credentialsData = CredentialsDataObject.builder()
+                .userEmail(userEmail)
+                .userPassword(userPassword)
                 .build();
 
         loginPage.loginAccount(credentialsData);
 
-        // ========== ENHANCEMENT: Attach user action to Allure ==========
+        // Attach user action to Allure
         AllureManager.attachUserAccountInfo();
     }
 
     @Then("I verify that {string} is visible")
     public void iVerifyThatIsVisible(String expectedText) {
+        // Get email from ConfigManager
+        String userEmail = ConfigManager.getValidLoginEmail();
         String actualText = loginPage.getSuccessLogin();
 
         if ("Logged in as user email".equalsIgnoreCase(expectedText.trim())) {
-            WebUI.verifyEquals(actualText, validEmail,
+            WebUI.verifyEquals(actualText, userEmail,
                     "Success login label is not showing the expected user email.");
             return;
         }

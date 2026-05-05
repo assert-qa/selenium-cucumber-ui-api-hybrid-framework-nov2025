@@ -2,6 +2,7 @@ package reports;
 
 import constants.ConstantGlobal;
 import factory.DriverManager;
+import managers.ConfigManager;
 import helpers.SystemHelper;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
@@ -29,15 +30,22 @@ public class AllureManager {
         return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
+    // ...existing code...
+
     // ========== ENHANCEMENT: Environment Information ==========
     @Attachment(value = "Test Environment Information", type = "text/plain")
     public static String attachEnvironmentInfo() {
         StringBuilder info = new StringBuilder();
         info.append("=== TEST ENVIRONMENT INFORMATION ===\n\n");
-        info.append("Environment: ").append(ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A").append("\n");
-        info.append("Base URL: ").append(ConstantGlobal.BASE_URL != null ? ConstantGlobal.BASE_URL : "N/A").append("\n");
-        info.append("Browser: ").append(ConstantGlobal.BROWSER != null ? ConstantGlobal.BROWSER : "N/A").append("\n");
-        info.append("Headless Mode: ").append(ConstantGlobal.HEADLESS != null ? ConstantGlobal.HEADLESS : "N/A").append("\n");
+
+        // Use environment from ConfigManager
+        String environment = ConfigManager.getEnvironment() != null ?
+            ConfigManager.getEnvironment() : (ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A");
+
+        info.append("Environment: ").append(environment).append("\n");
+        info.append("Base URL: ").append(ConfigManager.getBaseUrl() != null ? ConfigManager.getBaseUrl() : "N/A").append("\n");
+        info.append("Browser: ").append(ConfigManager.getBrowser() != null ? ConfigManager.getBrowser() : "N/A").append("\n");
+        info.append("Headless Mode: ").append(ConfigManager.isHeadless()).append("\n");
         info.append("Execution Time: ").append(LocalDateTime.now().format(
                 DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"))).append("\n");
         return info.toString();
@@ -48,11 +56,18 @@ public class AllureManager {
     public static String attachUserAccountInfo() {
         StringBuilder userInfo = new StringBuilder();
         userInfo.append("=== TEST USER ACCOUNT INFORMATION ===\n\n");
-        userInfo.append("Email: ").append(ConstantGlobal.VALID_EMAIL != null ? ConstantGlobal.VALID_EMAIL : "N/A").append("\n");
+
+        // Use email and environment from ConfigManager
+        String email = ConfigManager.getValidLoginEmail() != null ?
+            ConfigManager.getValidLoginEmail() : (ConstantGlobal.VALID_EMAIL != null ? ConstantGlobal.VALID_EMAIL : "N/A");
+        String environment = ConfigManager.getEnvironment() != null ?
+            ConfigManager.getEnvironment() : (ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A");
+
+        userInfo.append("Email: ").append(email).append("\n");
         userInfo.append("Account Type: ").append(getAccountType()).append("\n");
-        userInfo.append("Environment: ").append(ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A").append("\n");
-        userInfo.append("Test Data Source: Per Environment Configuration\n");
-        userInfo.append("Credentials Loaded From: env/").append(ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "unknown").append(".properties\n");
+        userInfo.append("Environment: ").append(environment).append("\n");
+        userInfo.append("Test Data Source: Environment Properties\n");
+        userInfo.append("Credentials Loaded From: env/").append(environment).append(".properties\n");
         return userInfo.toString();
     }
 
@@ -88,11 +103,18 @@ public class AllureManager {
         summary.append("=== TEST RESULT SUMMARY ===\n\n");
         summary.append("Test Name: ").append(testName).append("\n");
         summary.append("Status: ").append(status).append("\n");
-        summary.append("Executed By: ").append(ConstantGlobal.VALID_EMAIL != null ? ConstantGlobal.VALID_EMAIL : "N/A").append("\n");
-        summary.append("Environment: ").append(ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A").append("\n");
+
+        // Use email and environment from ConfigManager
+        String email = ConfigManager.getValidLoginEmail() != null ?
+            ConfigManager.getValidLoginEmail() : (ConstantGlobal.VALID_EMAIL != null ? ConstantGlobal.VALID_EMAIL : "N/A");
+        String environment = ConfigManager.getEnvironment() != null ?
+            ConfigManager.getEnvironment() : (ConstantGlobal.ENV != null ? ConstantGlobal.ENV : "N/A");
+
+        summary.append("Executed By: ").append(email).append("\n");
+        summary.append("Environment: ").append(environment).append("\n");
         summary.append("Execution Date: ").append(LocalDateTime.now().format(
                 DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"))).append("\n");
-        summary.append("Browser: ").append(ConstantGlobal.BROWSER != null ? ConstantGlobal.BROWSER : "N/A").append("\n");
+        summary.append("Browser: ").append(ConfigManager.getBrowser() != null ? ConfigManager.getBrowser() : "N/A").append("\n");
         return summary.toString();
     }
 

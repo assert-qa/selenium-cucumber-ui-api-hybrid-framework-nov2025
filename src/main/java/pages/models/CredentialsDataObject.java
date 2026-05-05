@@ -6,7 +6,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CredentialsData {
+public class CredentialsDataObject {
     private String userEmail;
     private String userPassword;
     private String confirmPassword;

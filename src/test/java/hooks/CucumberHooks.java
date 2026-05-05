@@ -3,9 +3,12 @@ package hooks;
 import constants.ConstantGlobal;
 import factory.DriverFactory;
 import factory.DriverManager;
+import managers.ConfigManager;
 import helpers.PropertiesHelper;
 import helpers.UserInfoHelper;
 import io.cucumber.java.*;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import reports.AllureManager;
 import reports.ExtentTestManager;
 import utils.LogUtils;
@@ -20,7 +23,21 @@ public class CucumberHooks {
         LogUtils.info(SEPARATOR);
         PropertiesHelper.loadAllFiles();
 
-        // ========== ENHANCEMENT: Log user info at suite level ==========
+        // Log configuration info
+        try {
+            String environment = ConfigManager.getEnvironment();
+            String baseUrl = ConfigManager.getBaseUrl();
+            String email = ConfigManager.getValidLoginEmail();
+
+            LogUtils.info("✅ Configuration loaded successfully");
+            LogUtils.info("Environment: " + environment);
+            LogUtils.info("Base URL: " + baseUrl);
+            LogUtils.info("Test User Email: " + email);
+        } catch (Exception e) {
+            LogUtils.warn("⚠️  Failed to load configuration: " + e.getMessage());
+        }
+
+        // Log user info at suite level
         LogUtils.info(UserInfoHelper.getUserTestHeader());
     }
 
@@ -50,13 +67,19 @@ public class CucumberHooks {
             if (ExtentTestManager.getTest() != null) {
                 ExtentTestManager.getTest().info("Starting scenario: " + testName);
 
-                // ========== ENHANCEMENT: Log user info to Extent Report ==========
-                ExtentTestManager.getTest().info("Test User: " + ConstantGlobal.VALID_EMAIL);
-                ExtentTestManager.getTest().info("Environment: " + ConstantGlobal.ENV);
-                ExtentTestManager.getTest().info("Account Type: " + UserInfoHelper.getUserAccountType());
+                // Log user info from ConfigManager
+                String userEmail = ConfigManager.getValidLoginEmail() != null ?
+                    ConfigManager.getValidLoginEmail() : ConstantGlobal.VALID_EMAIL;
+                String environment = ConfigManager.getEnvironment() != null ?
+                    ConfigManager.getEnvironment() : ConstantGlobal.ENV;
+                String accountType = UserInfoHelper.getUserAccountType();
+
+                ExtentTestManager.getTest().info("Test User: " + userEmail);
+                ExtentTestManager.getTest().info("Environment: " + environment);
+                ExtentTestManager.getTest().info("Account Type: " + accountType);
             }
 
-            // ========== ENHANCEMENT: Attach user info to Allure Report ==========
+            // Attach user info to Allure Report
             AllureManager.attachEnvironmentInfo();
             AllureManager.attachUserAccountInfo();
 
@@ -85,13 +108,23 @@ public class CucumberHooks {
             if (ExtentTestManager.getTest() != null) {
                 if ("FAILED".equalsIgnoreCase(status)) {
                     ExtentTestManager.getTest().fail("Scenario Failed: " + scenario.getName());
-                    // ========== ENHANCEMENT: Attach summary on failure ==========
+
+                    // Capture screenshot on failure
+                    byte[] screenshot = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
+                    scenario.attach(screenshot, "image/png", "Failed Screenshot");
+
+                    // Attach to Allure
+                    AllureManager.saveScreenshotPNG();
+
+                    // Attach summary on failure
                     AllureManager.attachTestResultSummary(scenario.getName(), "FAILED");
+
+                    LogUtils.error("Screenshot captured for failed scenario: " + scenario.getName());
                 } else if ("SKIPPED".equalsIgnoreCase(status) || "UNKNOWN".equalsIgnoreCase(status)) {
                     ExtentTestManager.getTest().skip("Scenario Skipped: " + scenario.getName());
                 } else {
                     ExtentTestManager.getTest().pass("Scenario Passed: " + scenario.getName());
-                    // ========== ENHANCEMENT: Attach summary on pass ==========
+                    // Attach summary on pass
                     AllureManager.attachTestResultSummary(scenario.getName(), "PASSED");
                 }
             }

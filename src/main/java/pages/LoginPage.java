@@ -3,7 +3,7 @@ package pages;
 import factory.DriverFactory;
 import keywords.WebUI;
 import org.openqa.selenium.By;
-import pages.models.CredentialsData;
+import pages.models.CredentialsDataObject;
 
 import java.util.Properties;
 
@@ -22,7 +22,7 @@ public class LoginPage extends DriverFactory {
     String logOutButton = setUp.getProperty("LOG_OUT_BUTTON");
     String errorToastMessage = setUp.getProperty("ERROR_TOAST_MESSAGE");
 
-    public void loginAccount(CredentialsData data){
+    public void loginAccount(CredentialsDataObject data){
         if (data.getUserEmail() != null)
             WebUI.setText(By.xpath(email), data.getUserEmail());
         if (data.getUserPassword() != null)

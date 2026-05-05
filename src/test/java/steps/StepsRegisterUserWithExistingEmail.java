@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import keywords.WebUI;
 import pages.RegisterPage;
-import pages.models.RegisterFormData;
+import pages.models.RegisterFormDataObject;
 
 
 public class StepsRegisterUserWithExistingEmail {
@@ -42,7 +42,7 @@ public class StepsRegisterUserWithExistingEmail {
 
     @When("I register with an existing email")
     public void registerWithExistingEmail() {
-        RegisterFormData credentialsData = RegisterFormData.builder()
+        RegisterFormDataObject credentialsData = RegisterFormDataObject.builder()
                 .email(REGISTERED_EMAIL)
                 .password(REGISTERED_PASSWORD)
                 .confirmPassword(REGISTERED_PASSWORD)

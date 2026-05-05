@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class NewEventData {
+public class NewEventDataObject {
     private String eventTitle;
     private String eventDescription;
     private String eventCategory;

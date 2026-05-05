@@ -6,6 +6,9 @@ Feature: Search Events
   Scenario: User search event with valid keyword
     Given I launch the browser
     When I navigate to url "https://eventhub.rahulshettyacademy.com"
+    And I enter registered email address and password
+    And I click "sign in" button
+    And I navigate to "Events" menu
     Then I verify that "Upcoming Events" is visible successfully
 
     When I enter "Diwali" in search field
