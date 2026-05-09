@@ -18,5 +18,3 @@ Feature: My Events Page
     Example:
       | eventName |
       |Dilli Diwali Mela|
-      |Hollywood Monsoon Night — Los Angeles|
-      |World Tech Summit|

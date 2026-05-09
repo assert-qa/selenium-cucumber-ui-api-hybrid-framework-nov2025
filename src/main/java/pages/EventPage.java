@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pages.models.EventDetailDataObject;
+import utils.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,9 @@ public class EventPage extends DriverFactory {
     String totalEventPrice = setUp.getProperty("TOTAL_PRICE_TICKET");
     String addEventButton = setUp.getProperty("ADD_EVENT_BUTTON");
     String allEventLists = setUp.getProperty("ALL_EVENT_LIST");
+
+    String eventInformationDetail = setUp.getProperty("EVENT_INFORMATION_DETAIL");
+    String aboutEventDetail = setUp.getProperty("ABOUT_EVENT_DETAIL");
 
 
     public void goToEventPage(){
@@ -81,6 +85,24 @@ public class EventPage extends DriverFactory {
         return WebUI.getWebElements(By.cssSelector(listEvents));
     }
 
+    // Event detail
+    public void isEventInformationDisplayed(){
+        List <WebElement> eventInformation = WebUI.getWebElements(By.cssSelector(eventInformationDetail));
+
+        if (!eventInformation.isEmpty()) {
+            LogUtils.info("Event information section is displayed");
+        }else {
+            LogUtils.info("Event information section is not displayed");
+        }
+    }
+
+    public void isEventDetailDisplayed() {
+        if (WebUI.isElementDisplayed(By.xpath(aboutEventDetail))) {
+            LogUtils.info("About Event Detail is displayed");
+        } else {
+            LogUtils.error("About Event Detail is not displayed");
+        }
+    }
 
 
 

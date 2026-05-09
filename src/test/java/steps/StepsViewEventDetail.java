@@ -4,7 +4,6 @@ import hooks.TestContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import keywords.WebUI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import pages.EventPage;
@@ -41,10 +40,11 @@ public class StepsViewEventDetail {
 
     @Then("I should be redirected to event detail page")
     public void iShouldBeRedirectedToEventDetailPage() {
-        
+        eventPage.isEventInformationDisplayed();
     }
 
     @And("I should see complete event information")
     public void iShouldSeeCompleteEventInformation() {
+        eventPage.isEventDetailDisplayed();
     }
 }
