@@ -54,8 +54,9 @@ public class CommonSteps {
         switch (normalizedButton) {
             case "sign in", "login" -> {
                 loginPage.clickSignInButton();
+                // Reduced sleep to catch toast faster
+                WebUI.sleep(0.3);
                 PopupHelper.handlePasswordManagerPopupCombined();
-                WebUI.sleep(1);
             }
             case "log out", "logout" -> loginPage.clickLogOutButton();
             case "register" -> registerPage.goToRegisterPage();

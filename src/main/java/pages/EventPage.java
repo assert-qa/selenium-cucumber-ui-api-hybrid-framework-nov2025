@@ -4,6 +4,7 @@ import factory.DriverFactory;
 import keywords.WebUI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import pages.models.EventDetailDataObject;
 
 import java.util.ArrayList;
@@ -32,11 +33,6 @@ public class EventPage extends DriverFactory {
     String allEventLists = setUp.getProperty("ALL_EVENT_LIST");
 
 
-    /*
-     - Book Event
-     - Dynamic Select Event (by event name) when searching for event > verify event details
-
-     */
     public void goToEventPage(){
         WebUI.clickElement(By.xpath(eventPage));
     }
@@ -45,7 +41,7 @@ public class EventPage extends DriverFactory {
         WebUI.setText(By.xpath(searchEvent), eventName);
     }
 
-    public List<EventDetailDataObject> getEventList() {
+    public List<EventDetailDataObject> getEventAttributes() {
         List<EventDetailDataObject> events = new ArrayList<>();
 
         List<WebElement> eventCards = WebUI.getWebElements(By.cssSelector(eventList));
@@ -67,7 +63,23 @@ public class EventPage extends DriverFactory {
         return events;
     }
 
+    public void selectEventCategory(String category){
+         Select dropDown = new Select(WebUI.getWebElement(By.cssSelector(selectEventCategory)));
+         dropDown.selectByVisibleText(category);
+    }
 
+    public void selectEventCity(String city){
+        Select dropDown = new Select(WebUI.getWebElement(By.cssSelector(selectEventCity)));
+        dropDown.selectByVisibleText(city);
+    }
+
+    public void clearFilterButton(){
+        WebUI.clickElement(By.xpath(clearFilterButton));
+    }
+
+    public List<WebElement> getEvents(){
+        return WebUI.getWebElements(By.cssSelector(listEvents));
+    }
 
 
 

@@ -18,6 +18,11 @@
             <class name="runner.TestRunnerLoginWithUnregisterCredentials"/>
         </classes>
     </test>
+    <test name="Logout User Test">
+        <classes>
+            <class name="runner.TestRunnerLogoutUser"/>
+        </classes>
+    </test>
 <!--    <test name="Register User Test">-->
 <!--        <classes>-->
 <!--            <class name="runner.TestRunnerRegisterUser"/>-->

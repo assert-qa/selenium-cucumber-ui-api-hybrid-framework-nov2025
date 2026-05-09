@@ -1,0 +1,659 @@
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - 
+========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - 
+========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - 
+========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - TEST RUN STARTED
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - TEST RUN STARTED
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - TEST RUN STARTED
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Time: 2026-05-07T14:56:27.887792800Z
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Time: 2026-05-07T14:56:27.887792800Z
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Time: 2026-05-07T14:56:27.888779600Z
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - ExtentReport initialized successfully
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - ExtentReport initialized successfully
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - ExtentReport initialized successfully
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - STARTING TEST SUITE
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - STARTING TEST SUITE
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - STARTING TEST SUITE
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - ✅ Configuration loaded successfully
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Environment: dev
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Base URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - Test User Email: chieko.gibson@gmail.com
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - ✅ Configuration loaded successfully
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Environment: dev
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Base URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-2] [LogUtils] - 
+==================================================
+Testing as: chieko.gibson@gmail.com (Development Account)
+Environment: dev
+==================================================
+
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - Test User Email: chieko.gibson@gmail.com
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-3] [LogUtils] - 
+==================================================
+Testing as: chieko.gibson@gmail.com (Development Account)
+Environment: dev
+==================================================
+
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - ✅ Configuration loaded successfully
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Environment: dev
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Base URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - Test User Email: chieko.gibson@gmail.com
+[INFO] 07-05-2026 21:56:29 [TestNG-tests-1] [LogUtils] - 
+==================================================
+Testing as: chieko.gibson@gmail.com (Development Account)
+Environment: dev
+==================================================
+
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - 
+TEST CASE STARTED: User logs out successfully
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-1] [LogUtils] - 
+TEST CASE STARTED: User login with valid email and password
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-2] [LogUtils] - 
+TEST CASE STARTED: User login with incorrect email and password
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] -   Feature: file:///D:/CodeProject/Java/MyProject/CucumberBDDProject/CucumberMiniFramework/cucumber_hybrid_framework/src/test/java/features/Login/LogoutUser.feature
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-2] [LogUtils] -   Feature: file:///D:/CodeProject/Java/MyProject/CucumberBDDProject/CucumberMiniFramework/cucumber_hybrid_framework/src/test/java/features/Login/LoginWithUnregisterCredentials.feature
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-1] [LogUtils] -   Feature: file:///D:/CodeProject/Java/MyProject/CucumberBDDProject/CucumberMiniFramework/cucumber_hybrid_framework/src/test/java/features/Login/LoginWithRegisteredCredentials.feature
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] -   Line: 6
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-2] [LogUtils] -   Line: 6
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-1] [LogUtils] -   Line: 6
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - SCENARIO START: User logs out successfully
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-2] [LogUtils] - SCENARIO START: User login with incorrect email and password
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-1] [LogUtils] - SCENARIO START: User login with valid email and password
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - SCENARIO STATUS: Starting
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-1] [LogUtils] - SCENARIO STATUS: Starting
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-2] [LogUtils] - SCENARIO STATUS: Starting
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:30 [TestNG-tests-3] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:44 [TestNG-tests-1] [LogUtils] - Driver initialized for scenario: User login with valid email and password
+[INFO] 07-05-2026 21:56:44 [TestNG-tests-1] [LogUtils] - ExtentTest initialized for: User login with valid email and password
+[INFO] 07-05-2026 21:56:44 [TestNG-tests-3] [LogUtils] - Driver initialized for scenario: User logs out successfully
+[INFO] 07-05-2026 21:56:44 [TestNG-tests-2] [LogUtils] - Driver initialized for scenario: User login with incorrect email and password
+[INFO] 07-05-2026 21:56:44 [TestNG-tests-2] [LogUtils] - ExtentTest initialized for: User login with incorrect email and password
+[INFO] 07-05-2026 21:56:44 [TestNG-tests-3] [LogUtils] - ExtentTest initialized for: User logs out successfully
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] -   Step: I launch the browser
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-1] [LogUtils] -   Step: I launch the browser
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:50 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] -   Step: I launch the browser
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-3] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:51 [TestNG-tests-1] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-2] [LogUtils] - Verify true: true
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-1] [LogUtils] - Verify true: true
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-3] [LogUtils] - Verify true: true
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-1] [LogUtils] -   Step Completed: I launch the browser
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-1] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-1] [LogUtils] -     Duration: 2656 ms
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-3] [LogUtils] -   Step Completed: I launch the browser
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-3] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-3] [LogUtils] -     Duration: 2673 ms
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-3] [LogUtils] -   Step: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-1] [LogUtils] -   Step: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-2] [LogUtils] -   Step Completed: I launch the browser
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-2] [LogUtils] -     Duration: 2739 ms
+[INFO] 07-05-2026 21:56:53 [TestNG-tests-2] [LogUtils] -   Step: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:56:55 [TestNG-tests-2] [LogUtils] - Open URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:56:56 [TestNG-tests-1] [LogUtils] - Open URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:56:57 [TestNG-tests-3] [LogUtils] - Open URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:56:57 [TestNG-tests-3] [LogUtils] -   Step Completed: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:56:57 [TestNG-tests-3] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:56:57 [TestNG-tests-3] [LogUtils] -     Duration: 4294 ms
+[INFO] 07-05-2026 21:56:57 [TestNG-tests-3] [LogUtils] -   Step: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:56:57 [TestNG-tests-1] [LogUtils] -   Step Completed: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:56:57 [TestNG-tests-1] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:56:57 [TestNG-tests-1] [LogUtils] -     Duration: 4292 ms
+[INFO] 07-05-2026 21:56:57 [TestNG-tests-1] [LogUtils] -   Step: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Verify By.xpath: //h1[normalize-space()='Sign in to EventHub'] is displayed
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-1] [LogUtils] - Verify By.xpath: //h1[normalize-space()='Sign in to EventHub'] is displayed
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-2] [LogUtils] -   Step Completed: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-2] [LogUtils] -     Duration: 5747 ms
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-2] [LogUtils] -   Step: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] -   Step Completed: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] -     Duration: 1788 ms
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] -   Step: I enter registered email address and password
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Logging in with account: chieko.gibson@gmail.com
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Account Type: Development Account
+[INFO] 07-05-2026 21:56:59 [TestNG-tests-3] [LogUtils] - Environment: dev
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] -   Step Completed: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] -     Duration: 2315 ms
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] -   Step: I enter registered email address and password
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Logging in with account: chieko.gibson@gmail.com
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Account Type: Development Account
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-1] [LogUtils] - Environment: dev
+[INFO] 07-05-2026 21:57:00 [TestNG-tests-2] [LogUtils] - Verify By.xpath: //h1[normalize-space()='Sign in to EventHub'] is displayed
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] -   Step Completed: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] -     Duration: 1766 ms
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] -   Step: I enter unregister email address and password
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:57:01 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:57:03 [TestNG-tests-3] [LogUtils] - Set text: chieko.gibson@gmail.com on element By.xpath: //input[@id='email']
+[INFO] 07-05-2026 21:57:03 [TestNG-tests-1] [LogUtils] - Set text: chieko.gibson@gmail.com on element By.xpath: //input[@id='email']
+[INFO] 07-05-2026 21:57:04 [TestNG-tests-2] [LogUtils] - Set text: unregister@mail.com on element By.xpath: //input[@id='email']
+[INFO] 07-05-2026 21:57:05 [TestNG-tests-3] [LogUtils] - Set text: Of3%BGOK on element By.xpath: //input[@id='password']
+[INFO] 07-05-2026 21:57:05 [TestNG-tests-3] [LogUtils] -   Step Completed: I enter registered email address and password
+[INFO] 07-05-2026 21:57:05 [TestNG-tests-3] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:05 [TestNG-tests-3] [LogUtils] -     Duration: 6013 ms
+[INFO] 07-05-2026 21:57:05 [TestNG-tests-3] [LogUtils] -   Step: I click "sign in" button
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-1] [LogUtils] - Set text: Of3%BGOK on element By.xpath: //input[@id='password']
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-1] [LogUtils] -   Step Completed: I enter registered email address and password
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-1] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-1] [LogUtils] -     Duration: 6550 ms
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-1] [LogUtils] -   Step: I click "sign in" button
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-2] [LogUtils] - Set text: Test@123 on element By.xpath: //input[@id='password']
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-2] [LogUtils] -   Step Completed: I enter unregister email address and password
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-2] [LogUtils] -     Duration: 5782 ms
+[INFO] 07-05-2026 21:57:06 [TestNG-tests-2] [LogUtils] -   Step: I click "sign in" button
+[INFO] 07-05-2026 21:57:07 [TestNG-tests-3] [LogUtils] - Click element By.xpath: //button[@id='login-btn']
+[INFO] 07-05-2026 21:57:07 [TestNG-tests-3] [LogUtils] - Attempting to handle Password Manager popup with combined method (ESC + Click)
+[INFO] 07-05-2026 21:57:07 [TestNG-tests-3] [LogUtils] - Attempting to handle Password Manager popup by pressing ESC
+[INFO] 07-05-2026 21:57:08 [TestNG-tests-3] [LogUtils] - Password Manager popup closed successfully with ESC
+[INFO] 07-05-2026 21:57:08 [TestNG-tests-2] [LogUtils] - Click element By.xpath: //button[@id='login-btn']
+[INFO] 07-05-2026 21:57:08 [TestNG-tests-1] [LogUtils] - Click element By.xpath: //button[@id='login-btn']
+[INFO] 07-05-2026 21:57:08 [TestNG-tests-2] [LogUtils] - Attempting to handle Password Manager popup with combined method (ESC + Click)
+[INFO] 07-05-2026 21:57:08 [TestNG-tests-2] [LogUtils] - Attempting to handle Password Manager popup by pressing ESC
+[INFO] 07-05-2026 21:57:08 [TestNG-tests-1] [LogUtils] - Attempting to handle Password Manager popup with combined method (ESC + Click)
+[INFO] 07-05-2026 21:57:08 [TestNG-tests-1] [LogUtils] - Attempting to handle Password Manager popup by pressing ESC
+[INFO] 07-05-2026 21:57:09 [TestNG-tests-3] [LogUtils] - Attempting to handle Password Manager popup by clicking close button
+[INFO] 07-05-2026 21:57:10 [TestNG-tests-1] [LogUtils] - Password Manager popup closed successfully with ESC
+[INFO] 07-05-2026 21:57:10 [TestNG-tests-2] [LogUtils] - Password Manager popup closed successfully with ESC
+[INFO] 07-05-2026 21:57:11 [TestNG-tests-2] [LogUtils] - Attempting to handle Password Manager popup by clicking close button
+[INFO] 07-05-2026 21:57:11 [TestNG-tests-1] [LogUtils] - Attempting to handle Password Manager popup by clicking close button
+[WARN] 07-05-2026 21:57:16 [TestNG-tests-3] [LogUtils] - Failed to close popup by clicking button: invalid selector: Unable to locate an element with the xpath expression //button[@class*='close'] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[@class*='close']' is not a valid XPath expression.
+  (Session info: chrome=147.0.7727.139)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b4afdfc47f1de5f1b2e953e4759896cf, findElement {value=//button[@class*='close'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.139, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\injas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53280}, goog:processID: 8152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53280/devtoo..., se:cdpVersion: 147.0.7727.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b4afdfc47f1de5f1b2e953e4759896cf
+[INFO] 07-05-2026 21:57:16 [TestNG-tests-3] [LogUtils] - Password Manager popup handling completed
+[INFO] 07-05-2026 21:57:16 [TestNG-tests-3] [LogUtils] -   Step Completed: I click "sign in" button
+[INFO] 07-05-2026 21:57:16 [TestNG-tests-3] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:16 [TestNG-tests-3] [LogUtils] -     Duration: 11290 ms
+[INFO] 07-05-2026 21:57:16 [TestNG-tests-3] [LogUtils] -   Step: I click "Logout" button
+[WARN] 07-05-2026 21:57:17 [TestNG-tests-1] [LogUtils] - Failed to close popup by clicking button: invalid selector: Unable to locate an element with the xpath expression //button[@class*='close'] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[@class*='close']' is not a valid XPath expression.
+  (Session info: chrome=147.0.7727.139)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [341913ad366688b76a3b244a1c8743fa, findElement {value=//button[@class*='close'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.139, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\injas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53279}, goog:processID: 13256, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53279/devtoo..., se:cdpVersion: 147.0.7727.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 341913ad366688b76a3b244a1c8743fa
+[INFO] 07-05-2026 21:57:17 [TestNG-tests-1] [LogUtils] - Password Manager popup handling completed
+[INFO] 07-05-2026 21:57:17 [TestNG-tests-1] [LogUtils] -   Step Completed: I click "sign in" button
+[INFO] 07-05-2026 21:57:17 [TestNG-tests-1] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:17 [TestNG-tests-1] [LogUtils] -     Duration: 10979 ms
+[INFO] 07-05-2026 21:57:17 [TestNG-tests-1] [LogUtils] -   Step: I verify that "Logged in as user email" is visible
+[WARN] 07-05-2026 21:57:18 [TestNG-tests-2] [LogUtils] - Failed to close popup by clicking button: invalid selector: Unable to locate an element with the xpath expression //button[@class*='close'] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[@class*='close']' is not a valid XPath expression.
+  (Session info: chrome=147.0.7727.139)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a87949597fb8802f269a239971f7c7c2, findElement {value=//button[@class*='close'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.139, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\injas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53278}, goog:processID: 27556, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53278/devtoo..., se:cdpVersion: 147.0.7727.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a87949597fb8802f269a239971f7c7c2
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-2] [LogUtils] - Password Manager popup handling completed
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-2] [LogUtils] -   Step Completed: I click "sign in" button
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-2] [LogUtils] -     Duration: 11466 ms
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-2] [LogUtils] -   Step: I verify error "Invalid email or password" is visible
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] - Click element By.xpath: //button[@id='logout-btn']
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] -   Step Completed: I click "Logout" button
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] -     Duration: 1740 ms
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] -   Step: I should be redirected to the login page
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:57:18 [TestNG-tests-3] [LogUtils] - Get current URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:57:19 [TestNG-tests-1] [LogUtils] - Get text: chieko.gibson@gmail.com
+[INFO] 07-05-2026 21:57:19 [TestNG-tests-3] [LogUtils] - Verify equals: https://eventhub.rahulshettyacademy.com/login and https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:57:19 [TestNG-tests-3] [LogUtils] -   Step Completed: I should be redirected to the login page
+[INFO] 07-05-2026 21:57:19 [TestNG-tests-3] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:19 [TestNG-tests-3] [LogUtils] -     Duration: 1109 ms
+[INFO] 07-05-2026 21:57:19 [TestNG-tests-3] [LogUtils] - SCENARIO FINISHED: User logs out successfully
+[INFO] 07-05-2026 21:57:19 [TestNG-tests-3] [LogUtils] - SCENARIO STATUS: PASSED
+[INFO] 07-05-2026 21:57:20 [TestNG-tests-1] [LogUtils] - Verify equals: chieko.gibson@gmail.com and chieko.gibson@gmail.com
+[INFO] 07-05-2026 21:57:20 [TestNG-tests-1] [LogUtils] -   Step Completed: I verify that "Logged in as user email" is visible
+[INFO] 07-05-2026 21:57:20 [TestNG-tests-1] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:20 [TestNG-tests-1] [LogUtils] -     Duration: 2669 ms
+[INFO] 07-05-2026 21:57:20 [TestNG-tests-1] [LogUtils] - SCENARIO FINISHED: User login with valid email and password
+[INFO] 07-05-2026 21:57:20 [TestNG-tests-1] [LogUtils] - SCENARIO STATUS: PASSED
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - ========================================
+
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - 
+TEST CASE FINISHED: User login with valid email and password
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] -   Status: PASSED
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] -   Duration: 52034 ms
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - ----------------------------------------
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - 
+========================================
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - TEST RUN FINISHED
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - Time: 2026-05-07T14:57:22.071785100Z
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - ========================================
+
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-1] [LogUtils] - Flushing Extent Report...
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - ========================================
+
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - 
+TEST CASE FINISHED: User logs out successfully
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] -   Status: PASSED
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] -   Duration: 52117 ms
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - ----------------------------------------
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - 
+========================================
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - TEST RUN FINISHED
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - Time: 2026-05-07T14:57:22.124287700Z
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - ========================================
+
+[INFO] 07-05-2026 21:57:22 [TestNG-tests-3] [LogUtils] - Flushing Extent Report...
+[INFO] 07-05-2026 21:57:24 [TestNG-tests-1] [LogUtils] - Extent Report flushed successfully
+[INFO] 07-05-2026 21:57:24 [TestNG-tests-1] [LogUtils] - Please check the exports/ExtentReport folder for the HTML report
+[INFO] 07-05-2026 21:57:24 [TestNG-tests-3] [LogUtils] - Extent Report flushed successfully
+[INFO] 07-05-2026 21:57:24 [TestNG-tests-3] [LogUtils] - Please check the exports/ExtentReport folder for the HTML report
+[ERROR] 07-05-2026 21:57:29 [TestNG-tests-2] [LogUtils] - Timeout waiting for the element Visible. By.xpath: (//p[@class='text-sm font-medium flex-1 leading-snug'])[1]
+[INFO] 07-05-2026 21:57:29 [TestNG-tests-2] [LogUtils] -   Step Completed: I verify error "Invalid email or password" is visible
+[INFO] 07-05-2026 21:57:29 [TestNG-tests-2] [LogUtils] -     Status: FAILED
+[INFO] 07-05-2026 21:57:29 [TestNG-tests-2] [LogUtils] -     Duration: 11322 ms
+[INFO] 07-05-2026 21:57:30 [TestNG-tests-2] [LogUtils] -     Screenshot saved to: ./exports/screenshots/I_verify_error__Invalid_email_or_password__is_visible_FAIL_07_05_2026_21_57_30.png
+[ERROR] 07-05-2026 21:57:30 [TestNG-tests-2] [LogUtils] -     Error: Timeout waiting for the element Visible. By.xpath: (//p[@class='text-sm font-medium flex-1 leading-snug'])[1]
+[ERROR] 07-05-2026 21:57:31 [TestNG-tests-2] [LogUtils] - Screenshot captured for failed scenario: User login with incorrect email and password
+[INFO] 07-05-2026 21:57:31 [TestNG-tests-2] [LogUtils] - SCENARIO FINISHED: User login with incorrect email and password
+[INFO] 07-05-2026 21:57:31 [TestNG-tests-2] [LogUtils] - SCENARIO STATUS: FAILED
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] - ========================================
+
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] - 
+TEST CASE FINISHED: User login with incorrect email and password
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] -   Status: FAILED
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] -   Duration: 62750 ms
+[ERROR] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] -   Error: Timeout waiting for the element Visible. By.xpath: (//p[@class='text-sm font-medium flex-1 leading-snug'])[1]
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] - ----------------------------------------
+[WARN] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] - Retrying test: runScenario (Attempt 1 of 2)
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] - 
+TEST CASE STARTED: User login with incorrect email and password
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] -   Feature: file:///D:/CodeProject/Java/MyProject/CucumberBDDProject/CucumberMiniFramework/cucumber_hybrid_framework/src/test/java/features/Login/LoginWithUnregisterCredentials.feature
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] -   Line: 6
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] - SCENARIO START: User login with incorrect email and password
+[INFO] 07-05-2026 21:57:32 [TestNG-tests-2] [LogUtils] - SCENARIO STATUS: Starting
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Driver initialized for scenario: User login with incorrect email and password
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - ExtentTest initialized for: User login with incorrect email and password
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] -   Step: I launch the browser
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:57:34 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:57:36 [TestNG-tests-2] [LogUtils] - Verify true: true
+[INFO] 07-05-2026 21:57:36 [TestNG-tests-2] [LogUtils] -   Step Completed: I launch the browser
+[INFO] 07-05-2026 21:57:36 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:36 [TestNG-tests-2] [LogUtils] -     Duration: 2280 ms
+[INFO] 07-05-2026 21:57:36 [TestNG-tests-2] [LogUtils] -   Step: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] - Open URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] -   Step Completed: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] -     Duration: 1303 ms
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] -   Step: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] - Verify By.xpath: //h1[normalize-space()='Sign in to EventHub'] is displayed
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] -   Step Completed: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] -     Duration: 177 ms
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] -   Step: I enter unregister email address and password
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:57:37 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:57:39 [TestNG-tests-2] [LogUtils] - Set text: unregister@mail.com on element By.xpath: //input[@id='email']
+[INFO] 07-05-2026 21:57:40 [TestNG-tests-2] [LogUtils] - Set text: Test@123 on element By.xpath: //input[@id='password']
+[INFO] 07-05-2026 21:57:40 [TestNG-tests-2] [LogUtils] -   Step Completed: I enter unregister email address and password
+[INFO] 07-05-2026 21:57:40 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:40 [TestNG-tests-2] [LogUtils] -     Duration: 2730 ms
+[INFO] 07-05-2026 21:57:40 [TestNG-tests-2] [LogUtils] -   Step: I click "sign in" button
+[INFO] 07-05-2026 21:57:42 [TestNG-tests-2] [LogUtils] - Click element By.xpath: //button[@id='login-btn']
+[INFO] 07-05-2026 21:57:42 [TestNG-tests-2] [LogUtils] - Attempting to handle Password Manager popup with combined method (ESC + Click)
+[INFO] 07-05-2026 21:57:42 [TestNG-tests-2] [LogUtils] - Attempting to handle Password Manager popup by pressing ESC
+[INFO] 07-05-2026 21:57:42 [TestNG-tests-2] [LogUtils] - Password Manager popup closed successfully with ESC
+[INFO] 07-05-2026 21:57:44 [TestNG-tests-2] [LogUtils] - Attempting to handle Password Manager popup by clicking close button
+[WARN] 07-05-2026 21:57:50 [TestNG-tests-2] [LogUtils] - Failed to close popup by clicking button: invalid selector: Unable to locate an element with the xpath expression //button[@class*='close'] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[@class*='close']' is not a valid XPath expression.
+  (Session info: chrome=147.0.7727.139)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c7e0276d646f51f17030293bb227c49e, findElement {value=//button[@class*='close'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.139, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\injas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52744}, goog:processID: 42760, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52744/devtoo..., se:cdpVersion: 147.0.7727.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c7e0276d646f51f17030293bb227c49e
+[INFO] 07-05-2026 21:57:50 [TestNG-tests-2] [LogUtils] - Password Manager popup handling completed
+[INFO] 07-05-2026 21:57:50 [TestNG-tests-2] [LogUtils] -   Step Completed: I click "sign in" button
+[INFO] 07-05-2026 21:57:50 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:57:50 [TestNG-tests-2] [LogUtils] -     Duration: 9655 ms
+[INFO] 07-05-2026 21:57:50 [TestNG-tests-2] [LogUtils] -   Step: I verify error "Invalid email or password" is visible
+[ERROR] 07-05-2026 21:58:01 [TestNG-tests-2] [LogUtils] - Timeout waiting for the element Visible. By.xpath: (//p[@class='text-sm font-medium flex-1 leading-snug'])[1]
+[INFO] 07-05-2026 21:58:01 [TestNG-tests-2] [LogUtils] -   Step Completed: I verify error "Invalid email or password" is visible
+[INFO] 07-05-2026 21:58:01 [TestNG-tests-2] [LogUtils] -     Status: FAILED
+[INFO] 07-05-2026 21:58:01 [TestNG-tests-2] [LogUtils] -     Duration: 10655 ms
+[INFO] 07-05-2026 21:58:01 [TestNG-tests-2] [LogUtils] -     Screenshot saved to: ./exports/screenshots/I_verify_error__Invalid_email_or_password__is_visible_FAIL_07_05_2026_21_58_01.png
+[ERROR] 07-05-2026 21:58:01 [TestNG-tests-2] [LogUtils] -     Error: Timeout waiting for the element Visible. By.xpath: (//p[@class='text-sm font-medium flex-1 leading-snug'])[1]
+[ERROR] 07-05-2026 21:58:02 [TestNG-tests-2] [LogUtils] - Screenshot captured for failed scenario: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:02 [TestNG-tests-2] [LogUtils] - SCENARIO FINISHED: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:02 [TestNG-tests-2] [LogUtils] - SCENARIO STATUS: FAILED
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] - ========================================
+
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] - 
+TEST CASE FINISHED: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] -   Status: FAILED
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] -   Duration: 31251 ms
+[ERROR] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] -   Error: Timeout waiting for the element Visible. By.xpath: (//p[@class='text-sm font-medium flex-1 leading-snug'])[1]
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] - ----------------------------------------
+[WARN] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] - Retrying test: runScenario (Attempt 2 of 2)
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] - 
+TEST CASE STARTED: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] -   Feature: file:///D:/CodeProject/Java/MyProject/CucumberBDDProject/CucumberMiniFramework/cucumber_hybrid_framework/src/test/java/features/Login/LoginWithUnregisterCredentials.feature
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] -   Line: 6
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] - SCENARIO START: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:04 [TestNG-tests-2] [LogUtils] - SCENARIO STATUS: Starting
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Driver initialized for scenario: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - ExtentTest initialized for: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] -   Step: I launch the browser
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:58:05 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:58:07 [TestNG-tests-2] [LogUtils] - Verify true: true
+[INFO] 07-05-2026 21:58:07 [TestNG-tests-2] [LogUtils] -   Step Completed: I launch the browser
+[INFO] 07-05-2026 21:58:07 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:58:07 [TestNG-tests-2] [LogUtils] -     Duration: 1049 ms
+[INFO] 07-05-2026 21:58:07 [TestNG-tests-2] [LogUtils] -   Step: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] - Open URL: https://eventhub.rahulshettyacademy.com/login
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] -   Step Completed: I navigate to url "https://eventhub.rahulshettyacademy.com/login"
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] -     Duration: 2253 ms
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] -   Step: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] - Verify By.xpath: //h1[normalize-space()='Sign in to EventHub'] is displayed
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] -   Step Completed: I verify that "Sign in to EventHub" is visible successfully
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] -     Duration: 217 ms
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] -   Step: I enter unregister email address and password
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/config.properties
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/env/dev.properties
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] - Loaded: src/main/java/objects/event_hub.properties
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] - Loaded: src/main/resources/cucumber.properties
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] - Total properties loaded: 44
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] - Environment found: dev
+[INFO] 07-05-2026 21:58:09 [TestNG-tests-2] [LogUtils] - Properties loaded successfully!
+[INFO] 07-05-2026 21:58:10 [TestNG-tests-2] [LogUtils] - Set text: unregister@mail.com on element By.xpath: //input[@id='email']
+[INFO] 07-05-2026 21:58:12 [TestNG-tests-2] [LogUtils] - Set text: Test@123 on element By.xpath: //input[@id='password']
+[INFO] 07-05-2026 21:58:12 [TestNG-tests-2] [LogUtils] -   Step Completed: I enter unregister email address and password
+[INFO] 07-05-2026 21:58:12 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:58:12 [TestNG-tests-2] [LogUtils] -     Duration: 2698 ms
+[INFO] 07-05-2026 21:58:12 [TestNG-tests-2] [LogUtils] -   Step: I click "sign in" button
+[INFO] 07-05-2026 21:58:13 [TestNG-tests-2] [LogUtils] - Click element By.xpath: //button[@id='login-btn']
+[INFO] 07-05-2026 21:58:13 [TestNG-tests-2] [LogUtils] - Attempting to handle Password Manager popup with combined method (ESC + Click)
+[INFO] 07-05-2026 21:58:13 [TestNG-tests-2] [LogUtils] - Attempting to handle Password Manager popup by pressing ESC
+[INFO] 07-05-2026 21:58:14 [TestNG-tests-2] [LogUtils] - Password Manager popup closed successfully with ESC
+[INFO] 07-05-2026 21:58:15 [TestNG-tests-2] [LogUtils] - Attempting to handle Password Manager popup by clicking close button
+[WARN] 07-05-2026 21:58:22 [TestNG-tests-2] [LogUtils] - Failed to close popup by clicking button: invalid selector: Unable to locate an element with the xpath expression //button[@class*='close'] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[@class*='close']' is not a valid XPath expression.
+  (Session info: chrome=147.0.7727.139)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9fe5e9fd00cf4c91becb4e590bde9939, findElement {value=//button[@class*='close'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.139, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\injas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57996}, goog:processID: 41996, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57996/devtoo..., se:cdpVersion: 147.0.7727.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9fe5e9fd00cf4c91becb4e590bde9939
+[INFO] 07-05-2026 21:58:22 [TestNG-tests-2] [LogUtils] - Password Manager popup handling completed
+[INFO] 07-05-2026 21:58:22 [TestNG-tests-2] [LogUtils] -   Step Completed: I click "sign in" button
+[INFO] 07-05-2026 21:58:22 [TestNG-tests-2] [LogUtils] -     Status: PASSED
+[INFO] 07-05-2026 21:58:22 [TestNG-tests-2] [LogUtils] -     Duration: 9871 ms
+[INFO] 07-05-2026 21:58:22 [TestNG-tests-2] [LogUtils] -   Step: I verify error "Invalid email or password" is visible
+[ERROR] 07-05-2026 21:58:32 [TestNG-tests-2] [LogUtils] - Timeout waiting for the element Visible. By.xpath: (//p[@class='text-sm font-medium flex-1 leading-snug'])[1]
+[INFO] 07-05-2026 21:58:32 [TestNG-tests-2] [LogUtils] -   Step Completed: I verify error "Invalid email or password" is visible
+[INFO] 07-05-2026 21:58:32 [TestNG-tests-2] [LogUtils] -     Status: FAILED
+[INFO] 07-05-2026 21:58:32 [TestNG-tests-2] [LogUtils] -     Duration: 10054 ms
+[INFO] 07-05-2026 21:58:32 [TestNG-tests-2] [LogUtils] -     Screenshot saved to: ./exports/screenshots/I_verify_error__Invalid_email_or_password__is_visible_FAIL_07_05_2026_21_58_32.png
+[ERROR] 07-05-2026 21:58:32 [TestNG-tests-2] [LogUtils] -     Error: Timeout waiting for the element Visible. By.xpath: (//p[@class='text-sm font-medium flex-1 leading-snug'])[1]
+[ERROR] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - Screenshot captured for failed scenario: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - SCENARIO FINISHED: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - SCENARIO STATUS: FAILED
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - ========================================
+
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - 
+TEST CASE FINISHED: User login with incorrect email and password
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] -   Status: FAILED
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] -   Duration: 29621 ms
+[ERROR] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] -   Error: Timeout waiting for the element Visible. By.xpath: (//p[@class='text-sm font-medium flex-1 leading-snug'])[1]
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - ----------------------------------------
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - TEST SUITE COMPLETED
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - ========================================
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - 
+========================================
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - TEST RUN FINISHED
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - Time: 2026-05-07T14:58:33.656632200Z
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - ========================================
+
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - Flushing Extent Report...
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - Extent Report flushed successfully
+[INFO] 07-05-2026 21:58:33 [TestNG-tests-2] [LogUtils] - Please check the exports/ExtentReport folder for the HTML report

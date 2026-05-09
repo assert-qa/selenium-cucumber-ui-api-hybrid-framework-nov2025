@@ -42,6 +42,12 @@ public class LoginPage extends DriverFactory {
     }
 
     public String getErrorToastMessage(){
+        // Wait for toast container to be present first
+        By toastContainer = By.cssSelector("div[aria-live='polite']");
+        WebUI.waitForElementPresent(toastContainer, 10);
+
+        // Then wait for the actual message to be visible
+        WebUI.waitForElementVisible(By.xpath(errorToastMessage), 10);
         return WebUI.getElementText(By.xpath(errorToastMessage));
     }
 }

@@ -2,6 +2,7 @@ package steps;
 
 import hooks.TestContext;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import keywords.WebUI;
 import pages.EventPage;
 import pages.models.EventDetailDataObject;
@@ -23,7 +24,7 @@ public class StepsViewEventsPage {
 
     @And("I should see list of events")
     public void i_should_see_list_of_events() {
-        List<EventDetailDataObject> events = eventPage.getEventList();
+        List<EventDetailDataObject> events = eventPage.getEventAttributes();
 
         WebUI.verifyFalse(events.isEmpty(), "Event list is empty");
 
@@ -39,7 +40,7 @@ public class StepsViewEventsPage {
 
     @And("each event should display title, date, location, and price")
     public void each_event_should_display_title_date_location_and_price() {
-        List<EventDetailDataObject> events = eventPage.getEventList();
+        List<EventDetailDataObject> events = eventPage.getEventAttributes();
 
         for (EventDetailDataObject event : events) {
             WebUI.verifyFalse(event.getTitle().isEmpty(), "Event title is missing");
@@ -48,4 +49,6 @@ public class StepsViewEventsPage {
             WebUI.verifyFalse(event.getPrice().isEmpty(), "Event price is missing");
         }
     }
+
+
 }

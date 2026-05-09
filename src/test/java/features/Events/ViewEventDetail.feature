@@ -11,6 +11,12 @@ Feature: My Events Page
     And I navigate to "Events" menu
     Then I verify that "Upcoming Events" is visible successfully
 
-    When I click on any event card
+    When I click on any "<eventName>" card
     Then I should be redirected to event detail page
     And I should see complete event information
+
+    Example:
+      | eventName |
+      |Dilli Diwali Mela|
+      |Hollywood Monsoon Night — Los Angeles|
+      |World Tech Summit|
